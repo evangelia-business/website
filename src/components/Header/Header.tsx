@@ -1,9 +1,9 @@
 import { Flex, Box, Spacer } from '@chakra-ui/react'
 import Image from "next/image";
 
-export default function Banner() {
+export default function Header() {
     return (
-        <Flex gap='2' alignItems='top' style={{ backgroundImage: `url('dotted_pattern.svg')`, backgroundSize: `65%`, height: `17rem ` }}>
+        <Flex gap='2' alignItems='top' style={{ backgroundImage: `url('dotted_pattern.svg')`, backgroundSize: `65%`, height: `17rem `, backgroundRepeat: 'repeat-x' }}>
             <Box style={{paddingTop:15, paddingLeft:0}}>
                 <Image src='/logo.svg' width="300" height="90" alt="Company Logo" />
             </Box>

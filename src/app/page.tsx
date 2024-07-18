@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       
-    
+    <p>Hellow World </p>
 
     </main>
   );

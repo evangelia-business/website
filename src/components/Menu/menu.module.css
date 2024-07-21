@@ -3,9 +3,13 @@
     color: var(--accent-hex);
 }
 
-nav a.menuitem {
+a.menuitem {
     color: var(--foreground-hex);;
     text-decoration: none;
     font-size: 1.2rem;
     margin-right: 16px;
+}
+
+.menuitem:first-child {
+    text-decoration: underline;
 }

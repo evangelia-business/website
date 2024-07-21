@@ -1,3 +1,6 @@
-@import 'modern-normalize';
 @import url('settings/variables.css');
+@import 'tailwindcss/base';
+
 @import url('elements/body.css');
+
+@import 'tailwindcss/utilities';

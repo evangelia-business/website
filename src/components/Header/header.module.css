@@ -1,13 +1,12 @@
 .background-image-dotted {
     background-image: url('../../../public/dotted_pattern.svg');
-    background-size: 65%;
+    /*background-size: cover;*/
     background-repeat: repeat-x;
 }
 
 .background {
     composes: background-image-dotted;
-    @apply h-72;
-    @apply py-4;
+    @apply h-72 py-4;
 }
 
 img.logo {

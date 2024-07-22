@@ -8,7 +8,7 @@
 
 .titleLeft-skin {
     color: var(--accent-hex);
-    @apply text-xl font-light;
+    @apply text-lg font-light;
 }
 
 .titleLeft{
@@ -23,7 +23,7 @@
 
 .titleRight-skin {
     color: var(--foreground-hex);
-    @apply font-normal text-3xl uppercase;
+    @apply font-light text-3xl uppercase;
 }
 
 .titleRight{

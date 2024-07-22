@@ -1,5 +1,5 @@
 import { Grid, GridItem } from '@chakra-ui/react'
-import Header from "@/components/Header/Header";
+import Header from "@/components/Header/header";
 
 export default function HomePage() {
     return (

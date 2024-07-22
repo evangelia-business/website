@@ -1,6 +1,15 @@
 @import url('settings/variables.css');
-@import 'tailwindcss/base';
 
+@import 'tailwindcss/base';
 @import url('elements/body.css');
 
 @import 'tailwindcss/utilities';
+
+@layer utilities {
+    .h-17rem {
+      height: 17rem;
+    }
+    .pt-4rem {
+      padding-top: 4rem;
+    }
+  }

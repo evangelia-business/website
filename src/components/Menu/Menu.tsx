@@ -8,8 +8,8 @@ export default function Menu() {
 
     <Box as="header" className={styles.header}>
       <HStack as="nav" spacing="1rem">
-        <Link as={NextLink} href='https://www.evangelia.me' className={styles.menuitem}>Home</Link>
-        <Link as={NextLink} href='https://tech.evangelia.me' className={styles.menuitem}>Philomath</Link>
+        <Link as={NextLink} href='https://www.evangelia.me' className={styles.menuItem}>Home</Link>
+        <Link as={NextLink} href='https://tech.evangelia.me' className={styles.menuItem}>Philomath</Link>
       </HStack>
     </Box>
   );

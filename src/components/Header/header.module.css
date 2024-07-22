@@ -1,7 +1,16 @@
-.background {
+
+.background-image-dotted {
     background-image: url('../../../public/dotted_pattern.svg');
     background-size: 65%;
-    height: 17rem;
     background-repeat: repeat-x;
+}
+
+.background {
+    composes: background-image-dotted;
+    height: 17rem;
     padding-top: 1rem;
+}
+
+img.logo {
+    height:65px
 }

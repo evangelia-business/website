@@ -1,8 +1,6 @@
 a.menuItem {
     color: var(--foreground-hex);
-    text-decoration: none;
-    @apply text-xl;
-    @apply mr-4;
+    @apply text-xl mr-8 no-underline;
 
 
     &:hover {
@@ -10,6 +8,6 @@ a.menuItem {
     }
     
     &:first-child {
-        text-decoration: underline;
+        @apply underline
     }
 }

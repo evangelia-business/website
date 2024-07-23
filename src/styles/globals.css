@@ -2,5 +2,6 @@
 
 @import 'tailwindcss/base';
 @import url('elements/body.css');
+@import url('components/buttons.css');
 
 @import 'tailwindcss/utilities';

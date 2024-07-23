@@ -31,7 +31,7 @@ export default function Banner() {
                     <Text
                         fontSize={['1.2rem', '1.2rem', '1.6rem', '1.875rem']}
                         textAlign={['center', 'center', 'end', 'end']}
-                        paddingTop= {['1.75rem', '1.75rem', '0.5', '0']}
+                        paddingTop= {['0.5rem', '0.5rem', '0', '0']}
                         paddingBottom= {['1.3rem', '1.3rem', '0', '0']}
                         paddingRight= {['1.5rem', '1.5rem', '0', '0']}
                         paddingLeft= {['1.5rem', '1.5rem', '0', '0']}

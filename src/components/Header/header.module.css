@@ -1,6 +1,5 @@
 .background-image-dotted {
     background-image: url('../../../public/dotted_pattern.svg');
-    /*background-size: cover;*/
     background-repeat: repeat-x;
 }
 

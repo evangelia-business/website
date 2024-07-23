@@ -8,10 +8,10 @@ import styles from './header.module.css'
 
 export default function Header() {
     return (
-        <Grid className={styles.background}>
+        <Grid className={styles.background} backgroundSize= { ["cover","cover", "auto", "auto" ]}>
             <GridItem w='100%' h='0' colStart={1}>
                 <Flex gap='1' alignItems='top'>
-                    <Box backgroundSize={{ base: "cover", md: "auto" }}>
+                    <Box>
                         <Image className={styles.logo} src='/logo.svg' width="245" height="65" alt="Company Logo" />
                     </Box>
                     <Spacer />

@@ -9,5 +9,12 @@
 }
 
 img.logo {
-    height:60px
+    @apply pl-3 h-11;
+}
+
+@media screen and (min-width: 768px) {
+  
+img.logo {
+    @apply h-14
+    }
 }

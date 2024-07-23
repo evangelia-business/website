@@ -1,5 +1,4 @@
 import { Flex, Box, Spacer, Grid, GridItem, Image } from '@chakra-ui/react'
-//import Image from "next/image";
 
 import Menu from '@/components/Menu/menu'
 import Banner from '@/components/Banner/banner';
@@ -12,7 +11,7 @@ export default function Header() {
             <GridItem w='100%' h='0' colStart={1}>
                 <Flex gap='1' alignItems='top'>
                     <Box>
-                        <Image className={styles.logo} src='/logo.svg' alt="Company Logo" />
+                        <Image className={styles.logo} height= "50" src='/logo.svg' alt="Company Logo" />
                     </Box>
                     <Spacer />
                     <Box display={{base:'none', md:'block'}} >

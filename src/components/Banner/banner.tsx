@@ -1,5 +1,4 @@
-import { Flex, Box, Button, Spacer, Text, Grid, GridItem, } from '@chakra-ui/react'
-import Image from "next/image";
+import { Flex, Box, Button, Image, Text, Grid, GridItem, } from '@chakra-ui/react'
 
 import styles from './banner.module.css'
 

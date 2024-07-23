@@ -1,7 +1,7 @@
 import { Flex, Box, Spacer, Grid, GridItem, Image } from '@chakra-ui/react'
 
-import Menu from '@/components/Menu/menu'
-import Banner from '@/components/Banner/banner';
+import Menu from '@/components/Menu/Menu'
+import Banner from '@/components/Banner/Banner';
 
 import styles from './header.module.css'
 

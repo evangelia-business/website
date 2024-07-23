@@ -21,13 +21,13 @@
 
 .titleRight-structure {
     width: 35rem;
-    @apply text-end mr-8 w-auto;
+    @apply text-end mr-8 w-auto leading-8;
 
 }
 
 .titleRight-skin {
     color: var(--foreground-hex);
-    @apply font-light uppercase;
+    @apply font-normal uppercase;
 }
 
 .titleRight{

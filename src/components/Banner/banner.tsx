@@ -28,7 +28,7 @@ export default function Banner() {
 
                 <Box className={styles.titleRight}>
                     <Text
-                        fontSize={['1.2rem', '1.2rem', '1.6rem', '1.875rem']}
+                        fontSize={['1.35rem', '1.35rem', '1.6rem', '1.875rem']}
                         textAlign={['center', 'center', 'end', 'end']}
                         paddingTop= {['0.5rem', '0.5rem', '0', '0']}
                         paddingBottom= {['1.3rem', '1.3rem', '0', '0']}

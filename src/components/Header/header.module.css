@@ -1,0 +1,20 @@
+.background-image-dotted {
+    background-image: url('../../../public/dotted_pattern.svg');
+    background-repeat: repeat-x;
+}
+
+.background {
+    composes: background-image-dotted;
+    @apply h-72 py-4;
+}
+
+img.logo {
+    @apply pl-3 h-11;
+}
+
+@media screen and (min-width: 768px) {
+  
+img.logo {
+    @apply h-14
+    }
+}

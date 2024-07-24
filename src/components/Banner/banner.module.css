@@ -1,0 +1,39 @@
+.bannerContainer {
+    @apply ml-6 pt-16;
+}
+
+.titleLeft-structure {
+    @apply mr-3 leading-6;
+}
+
+.titleLeft-skin {
+    color: var(--accent-hex);
+    @apply text-lg font-normal;
+}
+
+.titleLeft{
+    composes: titleLeft-structure titleLeft-skin;
+ }
+
+ .subTitleLeft {
+    @apply pb-10;
+ }
+
+.titleRight-structure {
+    width: 35rem;
+    @apply text-end mr-8 w-auto leading-10 tracking-widest;
+
+}
+
+.titleRight-skin {
+    color: var(--foreground-hex);
+    @apply font-medium uppercase;
+}
+
+.titleRight{
+    composes: titleRight-structure titleRight-skin;
+}
+
+img.techIcon {
+    height: 28px;
+}

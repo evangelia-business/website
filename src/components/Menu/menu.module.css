@@ -1,0 +1,16 @@
+a.menuItem {
+    color: var(--foreground-hex);
+    @apply text-xl mr-2 no-underline pt-2;
+
+
+    &:hover {
+        color: var(--accent-hex);
+    }
+    
+    &:first-child {
+        @apply underline
+    }
+    &:last-child {
+        @apply mr-8
+    }
+}

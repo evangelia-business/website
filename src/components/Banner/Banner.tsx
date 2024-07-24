@@ -8,8 +8,8 @@ export default function Banner() {
         <Grid templateColumns={{ base: "1fr", md: "2fr 3fr", lg: '2fr 1.5fr' }} className={styles.bannerContainer} >
 
             <GridItem order={{ base: 2, md: 1 }}>
-                <Flex direction='column'>
-                    <Flex direction="row" justifyContent={['center', 'center', 'flex-start', 'flex-start']}>
+                <Flex direction='column' alignItems={['center', 'center', 'start', 'start']}>
+                    <Flex direction="row" justifyContent={['center', 'center', 'flex-start', 'flex-start']} display={{ base: 'none', md: 'flex' }}>
                         <Box className={styles.titleLeft}><Text>PHILOMATH </Text></Box>
                         <Image className={styles.techIcon} src='/tech.svg' width="25" height="25" alt="Company Logo" />
                     </Flex>
@@ -28,12 +28,13 @@ export default function Banner() {
 
                 <Box className={styles.titleRight}>
                     <Text
-                        fontSize={['1.35rem', '1.35rem', '1.6rem', '1.875rem']}
+                        fontSize={['1.5rem', '1.5rem', '1.6rem', '1.875rem']}
                         textAlign={['center', 'center', 'end', 'end']}
                         paddingTop= {['0.5rem', '0.5rem', '0', '0']}
                         paddingBottom= {['1.3rem', '1.3rem', '0', '0']}
                         paddingRight= {['1.5rem', '1.5rem', '0', '0']}
                         paddingLeft= {['1.5rem', '1.5rem', '0', '0']}
+                        lineHeight={['1.8rem', '1.8rem', '2.5rem', '2.5rem']}
                         >
                         Motto for Customers to convince them to buy the product
                     </Text>

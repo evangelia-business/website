@@ -1,4 +1,4 @@
-import { Providers } from './providers'
+import { Providers } from "./providers";
 import { Urbanist } from "next/font/google";
 
 import type { Metadata } from "next";
@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={urbanist.className}><Providers>{children}</Providers></body>
+      <body className={urbanist.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

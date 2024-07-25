@@ -1,7 +1,7 @@
-import NextLink from "next/link";
+import NextLink from 'next/link'
 
-import { Box, HStack, Link } from "@chakra-ui/react";
-import styles from "./menu.module.css";
+import { Box, HStack, Link } from '@chakra-ui/react'
+import styles from './menu.module.css'
 
 export default function Menu() {
   return (
@@ -23,5 +23,5 @@ export default function Menu() {
         </Link>
       </HStack>
     </Box>
-  );
+  )
 }

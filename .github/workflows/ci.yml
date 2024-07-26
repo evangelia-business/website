@@ -16,7 +16,7 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run Prettier check
         run: npm run format
@@ -37,7 +37,7 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run Tests
         run: npm test
@@ -58,7 +58,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run Prettier check
         run: npm run format
@@ -67,4 +67,4 @@ jobs:
         run: npm run lint
 
       - name: Run Tests
-        run: npm test
+        run: npm run test

@@ -10,10 +10,18 @@
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "prepare": "husky install",
+    "type-check": "tsc --noEmit",
     "test": "jest"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,md}": "prettier --write"
+    "src/**/*.{js,jsx,ts,tsx,json,css,md}": [
+      "next lint --fix",
+      "tsc --noEmit",
+      "prettier --write"
+    ],
+    "*.{json,css,scss,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",

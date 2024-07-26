@@ -5,8 +5,8 @@ const nextConfig = {
     experimental: {
         appDir: true,
     },
-     // Add the basePath property
-     basePath: '/src',
+    // Add the basePath property
+    basePath: '/src',
 }
 
 export default nextConfig

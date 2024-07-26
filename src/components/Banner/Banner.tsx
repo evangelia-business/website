@@ -45,13 +45,18 @@ export default function Banner() {
               fontSize={['0.9rem', '1.125rem', '1.125rem', '1.125rem']}
               display={{ base: 'none', md: 'block' }}
             >
-              {' '}
               The Coding Academy for Frontend Engineers
             </Text>
           </Box>
           <Box textAlign={['center', 'center', 'left', 'left']}>
-            <Button colorScheme="brand" bg="primary" size="xs">
-              Joiny my courses
+            <Button
+              role="button"
+              name="join-courses"
+              colorScheme="brand"
+              bg="primary"
+              size="xs"
+            >
+              Join my courses
             </Button>
           </Box>
         </Flex>

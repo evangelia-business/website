@@ -9,6 +9,7 @@ export default function Menu() {
       <HStack as="nav" spacing="1rem">
         <Link
           as={NextLink}
+          data-testid="home-link"
           href="https://www.evangelia.me"
           className={styles.menuItem}
         >
@@ -16,6 +17,7 @@ export default function Menu() {
         </Link>
         <Link
           as={NextLink}
+          data-testid="tech-link"
           href="https://tech.evangelia.me"
           className={styles.menuItem}
         >

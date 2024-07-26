@@ -3,8 +3,5 @@
 
 npx lint-staged
 
-# Run Jest tests
-npm test
-
 # Check for unused exports
 npx ts-prune

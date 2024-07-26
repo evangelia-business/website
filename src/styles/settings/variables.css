@@ -1,6 +1,5 @@
 :root {
-    --foreground-hex: #E6E6E6;
-    --background-hex: #101425;
-    --accent-hex:#00DCFF;
-  }
-  
+  --foreground-hex: #e6e6e6;
+  --background-hex: #101425;
+  --accent-hex: #00dcff;
+}

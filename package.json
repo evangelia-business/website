@@ -19,7 +19,7 @@
       "tsc --noEmit",
       "prettier --write"
     ],
-    "*.{json,css,scss,md}": [
+    "*.{json,css,scss,md,yaml,yml, mjs}": [
       "prettier --write"
     ]
   },

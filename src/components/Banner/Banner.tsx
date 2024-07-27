@@ -13,7 +13,12 @@ import styles from './banner.module.css'
 export default function Banner() {
   return (
     <Grid
-      templateColumns={{ base: '1fr', md: '2fr 3fr', lg: '2fr 1.5fr' }}
+      templateColumns={{
+        base: '1fr',
+        md: '1fr 2fr',
+        lg: '2fr 3fr',
+        xl: '2fr 2fr',
+      }}
       className={styles.bannerContainer}
     >
       <GridItem order={{ base: 2, md: 1 }}>
@@ -39,7 +44,7 @@ export default function Banner() {
           </Flex>
           <Box
             className={styles.subTitleLeft}
-            paddingBottom={['0.5rem', '0.5rem', '2.5rem', '2.5rem']}
+            paddingBottom={['0.5rem', '0.5rem', '0.8rem', '2.5rem']}
           >
             <Text
               fontSize={['0.9rem', '1.125rem', '1.125rem', '1.125rem']}
@@ -71,7 +76,7 @@ export default function Banner() {
             paddingBottom={['1.3rem', '1.3rem', '0', '0']}
             paddingRight={['1.5rem', '1.5rem', '0', '0']}
             paddingLeft={['1.5rem', '1.5rem', '0', '0']}
-            lineHeight={['1.8rem', '1.8rem', '2.5rem', '2.5rem']}
+            lineHeight={['1.6rem', '1.6rem', '2rem', '2rem']}
           >
             Motto for Customers to convince them to buy the product
           </Text>

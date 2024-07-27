@@ -15,6 +15,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,md}": [
+      "next lint --fix",
       "tsc --noEmit",
       "prettier --write"
     ],

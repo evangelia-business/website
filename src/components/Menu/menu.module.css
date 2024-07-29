@@ -1,6 +1,6 @@
 a.menuItem {
   color: var(--foreground-hex);
-  @apply text-xl mr-2 no-underline pt-2;
+  @apply mr-2 pt-2 text-xl no-underline;
 
   &:hover {
     color: var(--accent-hex);

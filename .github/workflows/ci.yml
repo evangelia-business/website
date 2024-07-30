@@ -8,10 +8,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: '20'
 
@@ -21,12 +21,12 @@ jobs:
 
       # Cache pnpm modules
       - name: Cache pnpm modules
-        uses: actions/cache@v4
+        uses: actions/cache@v3
         with:
           path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-
+            ${{ runner.os }}-pnpm-store-
 
         # Install dependencies
       - name: Install dependencies
@@ -48,6 +48,9 @@ jobs:
       # Install pnpm globally
       - name: Install pnpm
         run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Run Prettier check
         run: pnpm run format
@@ -72,5 +75,8 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm
 
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Run Tests
-        run: pnpm test
+        run: pnpm run test

@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Ensure dependencies are installed without modifying the lockfile
+pnpm install --frozen-lockfile

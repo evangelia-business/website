@@ -3,24 +3,37 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  pnpm:
+  cache:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20]
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Cache pnpm modules
+        uses: actions/cache@v4
         with:
-          version: 9
-      - name: Use Node.js ${{ matrix.node-version }}
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      # Install dependencies
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+  lint:
+    runs-on: ubuntu-latest
+    needs: cache
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
-      - name: Install dependencies
-        run: pnpm install
+          node-version: '20'
 
       - name: Run Prettier check
         run: pnpm run format
@@ -30,6 +43,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    needs: cache
 
     steps:
       - name: Checkout code
@@ -42,30 +56,3 @@ jobs:
 
       - name: Run Tests
         run: pnpm test
-
-  cache:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Cache node modules
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Run Prettier check
-        run: pnpm run format
-
-      - name: Run Linter check
-        run: pnpm run lint
-
-      - name: Run Tests
-        run: pnpm run test

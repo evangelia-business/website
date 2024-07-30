@@ -18,7 +18,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-
 
-      # Install dependencies
+          # Install pnpm globally
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+        # Install dependencies
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 

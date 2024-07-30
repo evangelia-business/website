@@ -28,9 +28,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-        # Install dependencies
+      # Install dependencies
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Log cache key
+        run: echo "Cache key:${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}"
 
   lint:
     runs-on: ubuntu-latest

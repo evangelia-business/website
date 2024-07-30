@@ -9,7 +9,7 @@
 }
 
 img.logo {
-  @apply pl-3 h-11;
+  @apply h-11 pl-3;
 }
 
 @media screen and (min-width: 768px) {

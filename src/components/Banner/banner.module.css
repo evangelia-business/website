@@ -15,13 +15,9 @@
   composes: titleLeft-structure titleLeft-skin;
 }
 
-.subTitleLeft {
-  @apply pb-10;
-}
-
 .titleRight-structure {
   width: 35rem;
-  @apply text-end mr-8 w-auto leading-10 tracking-widest;
+  @apply mr-8 w-auto text-end leading-10 tracking-widest;
 }
 
 .titleRight-skin {

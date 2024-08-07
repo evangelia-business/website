@@ -70,7 +70,7 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
               size="xs"
               onClick={onClick} // Add onClick prop to the Button component
             >
-              Join my courses
+              {t('btn_join')}
             </Button>
           </Box>
         </Flex>
@@ -87,7 +87,7 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
             paddingLeft={['1.5rem', '1.5rem', '0', '0']}
             lineHeight={['1.6rem', '1.6rem', '2rem', '2rem']}
           >
-            Motto for Customers to convince them to buy the product
+            {t('motto')}
           </Text>
         </Box>
       </GridItem>

@@ -14,7 +14,11 @@ type ProvidersProps = {
 export function Providers({ children, messages, locale }: ProvidersProps) {
   return (
     <ChakraProvider theme={theme}>
-      <NextIntlClientProvider messages={messages} locale={locale}>
+      <NextIntlClientProvider
+        messages={messages}
+        locale={locale}
+        timeZone="Europe/Athens"
+      >
         {children}
       </NextIntlClientProvider>
     </ChakraProvider>

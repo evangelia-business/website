@@ -1,6 +1,6 @@
 import { Grid } from '@chakra-ui/react'
 
-import Header from '@/components/Header/Header'
+import Header from '../../components/Header/Header'
 
 export default function HomePage() {
   return (

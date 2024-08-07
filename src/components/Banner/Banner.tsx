@@ -1,3 +1,4 @@
+import { FC } from 'react'
 import {
   Flex,
   Box,
@@ -8,9 +9,16 @@ import {
   GridItem,
 } from '@chakra-ui/react'
 
+import { useTranslations } from 'next-intl'
+
 import styles from './banner.module.css'
 
-export default function Banner() {
+export interface BannerProps {
+  onClick?: () => void
+}
+
+const Banner: FC<BannerProps> = ({ onClick }) => {
+  const t = useTranslations('Banner')
   return (
     <Grid
       templateColumns={{
@@ -32,7 +40,7 @@ export default function Banner() {
             display={{ base: 'none', md: 'flex' }}
           >
             <Box className={styles.titleLeft}>
-              <Text>PHILOMATH </Text>
+              <Text>{t('title')} </Text>
             </Box>
             <Image
               className={styles.techIcon}
@@ -50,7 +58,7 @@ export default function Banner() {
               fontSize={['0.9rem', '1.125rem', '1.125rem', '1.125rem']}
               display={{ base: 'none', md: 'block' }}
             >
-              The Coding Academy for Frontend Engineers
+              {t('text')}
             </Text>
           </Box>
           <Box textAlign={['center', 'center', 'left', 'left']}>
@@ -60,6 +68,7 @@ export default function Banner() {
               colorScheme="brand"
               bg="primary"
               size="xs"
+              onClick={onClick} // Add onClick prop to the Button component
             >
               Join my courses
             </Button>
@@ -85,3 +94,5 @@ export default function Banner() {
     </Grid>
   )
 }
+
+export default Banner

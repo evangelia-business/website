@@ -1,45 +1,62 @@
 import '@testing-library/jest-dom'
-
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import Banner, { BannerProps } from './Banner'
-
 import { NextIntlClientProvider } from 'next-intl'
-import enMessages from '../../../messages/en.json'
+import { useRouter } from 'next/navigation'
+import enLocales from '@/locales/en.json'
 
-test('renders Banner component with title and subtitle', () => {
-  const { getByText } = render(
-    <NextIntlClientProvider locale="en" messages={enMessages}>
-      <Banner />
+jest.mock('next/navigation', () => ({
+  useRouter: jest.fn(),
+}))
+
+const renderWithIntl = (component: React.ReactNode, locale: string) => {
+  const locales = locale === 'en' ? { Banner: enLocales.Banner } : {}
+  return render(
+    <NextIntlClientProvider locale={locale} messages={locales}>
+      {component}
     </NextIntlClientProvider>
   )
-  expect(getByText(enMessages.Banner.title)).toBeInTheDocument()
-  expect(getByText(enMessages.Banner.text)).toBeInTheDocument()
-})
+}
+describe('Banner component', () => {
+  test('renders Banner component with title and subtitle', () => {
+    renderWithIntl(<Banner />, 'en')
 
-test('renders a button in the Banner component', () => {
-  const { getByRole } = render(
-    <NextIntlClientProvider locale="en" messages={enMessages}>
-      <Banner />
-    </NextIntlClientProvider>
-  )
-  const button = getByRole('button')
-  expect(button).toBeInTheDocument()
-})
+    // Use regular expressions to make the matching more flexible
+    expect(screen.getByText(/PHILOMATH/i)).toBeInTheDocument()
+    expect(
+      screen.getByText(/The Coding Academy for Frontend Engineers/i)
+    ).toBeInTheDocument()
+  })
 
-test('calls the onClick handler when the button is clicked', () => {
-  const handleClick = jest.fn()
-  const props: BannerProps = {
-    onClick: handleClick,
-  }
-  const { getByRole } = render(
-    <NextIntlClientProvider locale="en" messages={enMessages}>
-      <Banner {...props} />
-    </NextIntlClientProvider>
-  )
+  test('renders a button in the Banner component', () => {
+    renderWithIntl(<Banner />, 'en')
+    const button = screen.getByRole('button', { name: /Join my courses/i })
+    expect(button).toBeInTheDocument()
+  })
 
-  const button = getByRole('button')
-  fireEvent.click(button)
+  test('calls the onClick handler when the button is clicked', () => {
+    const handleClick = jest.fn()
+    const props: BannerProps = {
+      onClick: handleClick,
+    }
+    renderWithIntl(<Banner {...props} />, 'en')
 
-  expect(handleClick).toHaveBeenCalled()
+    const button = screen.getByRole('button', { name: /Join my courses/i })
+    fireEvent.click(button)
+
+    expect(handleClick).toHaveBeenCalled()
+  })
+
+  test('navigates to the tech subdomain when the button is clicked and no onClick is provided', () => {
+    const pushMock = jest.fn()
+    ;(useRouter as jest.Mock).mockReturnValue({ push: pushMock })
+
+    renderWithIntl(<Banner />, 'en')
+
+    const button = screen.getByRole('button', { name: /Join my courses/i })
+    fireEvent.click(button)
+
+    expect(pushMock).toHaveBeenCalledWith('https://tech.evangelia.me')
+  })
 })

@@ -1,4 +1,7 @@
+'use client'
+
 import { FC } from 'react'
+import { useRouter } from 'next/navigation'
 import {
   Flex,
   Box,
@@ -19,6 +22,17 @@ export interface BannerProps {
 
 const Banner: FC<BannerProps> = ({ onClick }) => {
   const t = useTranslations('Banner')
+
+  const router = useRouter()
+
+  // Default handler that navigates to the tech subdomain
+  const handleClick = () => {
+    if (onClick) {
+      onClick()
+    } else {
+      router.push('https://tech.evangelia.me')
+    }
+  }
   return (
     <Grid
       templateColumns={{
@@ -68,7 +82,7 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
               colorScheme="brand"
               bg="primary"
               size="xs"
-              onClick={onClick} // Add onClick prop to the Button component
+              onClick={handleClick} // Add onClick prop to the Button component
             >
               {t('btn_join')}
             </Button>

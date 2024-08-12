@@ -1,5 +1,5 @@
 declare module 'next-intl' {
-  export type IntlMessages = Record<string, string>
+  export type IntlLocales = Record<string, string>
   export function useTranslations(
     namespace?: string
   ): (key: string, params?: Record<string, any>) => string

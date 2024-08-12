@@ -1,7 +1,7 @@
 // app/providers.tsx
 'use client'
 
-import theme from '../../styles/settings/theme'
+import theme from '@/styles/settings/theme'
 import { NextIntlClientProvider } from 'next-intl'
 
 import { ChakraProvider } from '@chakra-ui/react'

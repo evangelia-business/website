@@ -20,15 +20,15 @@ export default async function LocaleLayout({
   children: React.ReactNode
   params: { locale: string }
 }) {
-  // Providing all messages to the client
+  // Providing all locales to the client
   // side is the easiest way to get started
-  const messages = await getMessages()
-  const isValidLocale = ['en', 'gr'].includes(locale) // Add your supported locales
+  const locales = await getMessages()
+  const isValidLocale = ['en'].includes(locale)
   if (!isValidLocale) notFound()
   return (
     <html lang={locale}>
       <body className={urbanist.className}>
-        <Providers messages={messages} locale={locale}>
+        <Providers messages={locales} locale={locale}>
           {children}
         </Providers>
       </body>

@@ -1,0 +1,19 @@
+{
+  "Banner": {
+    "title": "PHILOMATH",
+    "text": "The Coding Academy for Frontend Engineers",
+    "motto": "Motto for Customers to convince them to buy the product",
+    "btn_join": "Join my courses"
+  },
+  "HomePage": {
+    "text": "Motto for Customers to convince them to buy the product",
+    "title": "Evangelia Umbrella Website",
+    "welcome": "Welcome to our website!",
+    "greeting": "Hello, {name}!",
+    "goodbye": "Goodbye!"
+  },
+  "Menu": {
+    "home": "Home",
+    "tech": "Philomath"
+  }
+}

@@ -1,3 +1,7 @@
+'use client'
+
+import { FC } from 'react'
+import { useRouter } from 'next/navigation'
 import {
   Flex,
   Box,
@@ -8,9 +12,27 @@ import {
   GridItem,
 } from '@chakra-ui/react'
 
+import { useTranslations } from 'next-intl'
+
 import styles from './banner.module.css'
 
-export default function Banner() {
+export interface BannerProps {
+  onClick?: () => void
+}
+
+const Banner: FC<BannerProps> = ({ onClick }) => {
+  const t = useTranslations('Banner')
+
+  const router = useRouter()
+
+  // Default handler that navigates to the tech subdomain
+  const handleClick = () => {
+    if (onClick) {
+      onClick()
+    } else {
+      router.push('https://tech.evangelia.me')
+    }
+  }
   return (
     <Grid
       templateColumns={{
@@ -32,7 +54,7 @@ export default function Banner() {
             display={{ base: 'none', md: 'flex' }}
           >
             <Box className={styles.titleLeft}>
-              <Text>PHILOMATH </Text>
+              <Text>{t('title')} </Text>
             </Box>
             <Image
               className={styles.techIcon}
@@ -50,7 +72,7 @@ export default function Banner() {
               fontSize={['0.9rem', '1.125rem', '1.125rem', '1.125rem']}
               display={{ base: 'none', md: 'block' }}
             >
-              The Coding Academy for Frontend Engineers
+              {t('text')}
             </Text>
           </Box>
           <Box textAlign={['center', 'center', 'left', 'left']}>
@@ -60,8 +82,9 @@ export default function Banner() {
               colorScheme="brand"
               bg="primary"
               size="xs"
+              onClick={handleClick} // Add onClick prop to the Button component
             >
-              Join my courses
+              {t('btn_join')}
             </Button>
           </Box>
         </Flex>
@@ -78,10 +101,12 @@ export default function Banner() {
             paddingLeft={['1.5rem', '1.5rem', '0', '0']}
             lineHeight={['1.6rem', '1.6rem', '2rem', '2rem']}
           >
-            Motto for Customers to convince them to buy the product
+            {t('motto')}
           </Text>
         </Box>
       </GridItem>
     </Grid>
   )
 }
+
+export default Banner

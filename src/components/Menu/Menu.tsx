@@ -1,9 +1,13 @@
+'use client'
 import NextLink from 'next/link'
 
 import { Box, HStack, Link } from '@chakra-ui/react'
 import styles from './menu.module.css'
+import { useTranslations } from 'next-intl'
 
 export default function Menu() {
+  const t = useTranslations('Menu')
+
   return (
     <Box as="header" className={styles.header}>
       <HStack as="nav" spacing="1rem">
@@ -13,7 +17,7 @@ export default function Menu() {
           href="https://www.evangelia.me"
           className={styles.menuItem}
         >
-          Home
+          {t('home')}
         </Link>
         <Link
           as={NextLink}
@@ -21,7 +25,7 @@ export default function Menu() {
           href="https://tech.evangelia.me"
           className={styles.menuItem}
         >
-          Philomath
+          {t('tech')}
         </Link>
       </HStack>
     </Box>

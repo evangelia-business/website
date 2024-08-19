@@ -1,7 +1,19 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx lint-staged
+echo "Running type check..."
+pnpm run type-check
 
-# Check for unused exports
-npx ts-prune
+echo "Running lint-staged..."
+pnpm run lint-staged
+
+echo "Checking for unused exports..."
+pnpm ts-prune
+
+# If any command fails, exit with a non-zero status code
+if [ $? -ne 0 ]; then
+  echo "Pre-commit checks failed. Please fix the issues and try committing again."
+  exit 1
+fi
+
+echo "All pre-commit checks passed!"

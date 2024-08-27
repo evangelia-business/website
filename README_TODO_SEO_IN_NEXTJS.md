@@ -127,3 +127,5 @@ const siteMetadata = {
 }
 export default siteMetadata
 ```
+
+Update the repo to correct the comment

@@ -1,109 +1,70 @@
-import { Box, Flex, Text, Image } from '@chakra-ui/react'
+import { Box, Flex, Text, Image as ChakraImage } from '@chakra-ui/react'
+import Image from 'next/image'
+import styles from './HelloSection.module.css'
 
 export default function HelloSection() {
   return (
-    <Box
-      width="100%"
+    <Flex
+      className={styles.helloSection}
+      direction={['column', 'column', 'row']}
       position="relative"
       height={['auto', 'auto', '278px']}
-      textAlign="left"
-      fontSize="16px"
       color="#e6e6e6"
-      padding={['10px', '10px', '0']}
+      padding={['20px', '20px', '0']}
     >
-      <Box
-        position={['relative', 'relative', 'absolute']}
-        top={['0', '0', '38px']}
-        left={['0', '0', '325px']}
-        width={['100%', '100%', 'calc(100% - 325px)']}
+      <Flex
+        direction="column"
+        flex={1}
+        zIndex={1}
+        marginTop={['0', '0', '38px']}
+        marginLeft={['0', '0', '325px']}
         maxWidth={['none', 'none', '600px']}
       >
-        <Box
-          width="181px"
-          height="40px"
-          display="flex"
-          flexDirection="column"
-          alignItems="flex-start"
-          justifyContent="flex-start"
-          paddingBottom="29px"
-          fontSize="18px"
-          color="#02e5f3"
-        >
-          <Text
-            fontSize={['48px', '20px']}
-            lineHeight="150%"
-            fontWeight="500"
-            display="flex"
-            alignItems="center"
-            height="48px"
-          >
-            HELLO,
-          </Text>
-        </Box>
         <Text
-          position="relative"
-          top="20px"
-          lineHeight="150%"
-          fontWeight="500"
-          display="inline-block"
-          width="100%"
-          maxWidth="372px"
+          className={styles.hello}
+          fontSize={['24px', '24px', '24px']} // You can change the font size as you wish to adjust for screen sizes
+          color="#02e5f3"
+          marginBottom="29px"
         >
-          <Text as="span">Lorem ipsum dolor sit </Text>
-          <Text as="span" color="#02e5f3">
-            amet
-          </Text>
-          <Text as="span">
-            , consectetur adipiscing elit, sed do eiusmod tempory,{' '}
-          </Text>
-          <Text as="span" color="#ff9f24">
-            Lorem
-          </Text>
-          <Text as="span"> ipsum dolor sit </Text>
-          <Text as="span" color="#03ea94">
-            amet
-          </Text>
-          <Text as="span">, consectetur adipiscing Lorem ipsum dolor sit </Text>
-          <Text as="span" color="#b400ff">
-            amet
-          </Text>
+          HELLO,
         </Text>
-        <Flex
-          position="relative"
-          gap="10px"
-          marginTop="20px"
-          justifyContent={['flex-start', 'flex-start', 'flex-start']}
-        >
-          <Image
+        <Text className={styles.description} maxWidth="372px">
+          Lorem ipsum dolor sit <span className={styles.cyan}>amet</span>,
+          consectetur adipiscing elit, sed do eiusmod tempory,{' '}
+          <span className={styles.orange}>Lorem</span> ipsum dolor sit{' '}
+          <span className={styles.green}>amet</span>, consectetur adipiscing
+          Lorem ipsum dolor sit <span className={styles.purple}>amet</span>
+        </Text>
+        <Flex gap="10px" marginTop="20px">
+          <ChakraImage
             alt="YouTube icon"
             src="/hello-icon-youtube.svg"
             width="26px"
             height="16px"
           />
-          <Image
+          <ChakraImage
             alt="Mic icon"
             src="/icon-mic.svg"
             width="14px"
             height="14px"
           />
         </Flex>
-      </Box>
+      </Flex>
       <Box
+        className={styles.circleImage}
         position="absolute"
-        top="-87px"
+        top={['-20px', '-20px', '-87px']}
         right="0"
-        width="382px"
-        height="342px"
-        display={['none', 'none', 'block']}
+        width={['200px', '200px', '382px']}
+        height={['179px', '179px', '342px']}
       >
         <Image
           alt="Circle"
           src="/Circle_icons_circle_icons_dark_blue.svg"
-          width="382px"
-          height="342px"
-          objectFit="cover"
+          fill
+          style={{ objectFit: 'contain' }}
         />
       </Box>
-    </Box>
+    </Flex>
   )
 }

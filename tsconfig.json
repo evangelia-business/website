@@ -25,7 +25,8 @@
       "@/locales/*": ["../locales/*"],
       "@/components/*": ["components/*"],
       "@/styles/*": ["styles/*"],
-      "@/public/*": ["../public/*"]
+      "@/public/*": ["../public/*"],
+      "@/config/*": ["config/*"]
     }
   },
   "include": [

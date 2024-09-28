@@ -10,7 +10,7 @@ export default function HelloSection() {
       textAlign="left"
       fontSize="16px"
       color="#e6e6e6"
-      padding={10}
+      padding={24}
       gap={2}
     >
       <Flex
@@ -37,23 +37,13 @@ export default function HelloSection() {
           width="100%"
           maxWidth="372px"
         >
-          <Text as="span">Lorem ipsum dolor sit </Text>
-          <Text as="span" color="#02e5f3">
-            amet
-          </Text>
           <Text as="span">
-            , consectetur adipiscing elit, sed do eiusmod tempory,{' '}
-          </Text>
-          <Text as="span" color="#ff9f24">
-            Lorem
-          </Text>
-          <Text as="span"> ipsum dolor sit </Text>
-          <Text as="span" color="#03ea94">
-            amet
-          </Text>
-          <Text as="span">, consectetur adipiscing Lorem ipsum dolor sit </Text>
-          <Text as="span" color="#b400ff">
-            amet
+            I am Evangelia, a multifaceted solopreneur dedicated to launching
+            ventures that inspire growth and transformation. My work spans four
+            distinct brands, all driven by a shared dedication to empowering
+            individuals and fostering excellence across various fields, from
+            technology and wellness to cultural understanding and creative
+            expression.{' '}
           </Text>
         </Text>
         <Flex
@@ -84,7 +74,7 @@ export default function HelloSection() {
         height="342px"
         objectFit="cover"
         position="relative"
-        top="-40%"
+        top="-45%"
       />
     </Flex>
   )

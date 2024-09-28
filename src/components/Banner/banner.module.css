@@ -3,12 +3,12 @@
 }
 
 .titleLeft-structure {
-  @apply mr-3 leading-6;
+  @apply mr-3 pb-2 leading-6;
 }
 
 .titleLeft-skin {
   color: var(--accent-hex);
-  @apply text-lg font-normal;
+  @apply text-xl font-semibold;
 }
 
 .titleLeft {
@@ -16,7 +16,7 @@
 }
 
 .titleRight-structure {
-  width: 35rem;
+  width: 37rem;
   @apply mr-8 w-auto text-end leading-10 tracking-widest;
 }
 

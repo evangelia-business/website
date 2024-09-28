@@ -37,7 +37,7 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
     <Grid
       templateColumns={{
         base: '1fr',
-        md: '1fr 2fr',
+        md: '2fr 2fr',
         lg: '2fr 3fr',
         xl: '2fr 2fr',
       }}
@@ -69,8 +69,10 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
             paddingBottom={['0.5rem', '0.5rem', '0.8rem', '2.5rem']}
           >
             <Text
-              fontSize={['0.9rem', '1.125rem', '1.125rem', '1.125rem']}
+              fontSize={['0.9rem', '1rem', '1rem', '1.08rem']}
               display={{ base: 'none', md: 'block' }}
+              lineHeight="1.3rem"
+              width={{ base: '100%', md: '70%' }}
             >
               {t('text')}
             </Text>
@@ -90,18 +92,30 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
         </Flex>
       </GridItem>
 
-      <GridItem order={{ base: 1, md: 2 }}>
-        <Box className={styles.titleRight}>
+      <GridItem order={{ base: 1, md: 2 }} margin="0 auto">
+        <Box className={styles.titleRight} width="max-content">
           <Text
-            fontSize={['1.5rem', '1.5rem', '1.6rem', '1.875rem']}
+            fontSize={['1.5rem', '1.7rem', '2.1rem', '2.4rem']}
             textAlign={['center', 'center', 'end', 'end']}
             paddingTop={['0.5rem', '0.5rem', '0', '0']}
             paddingBottom={['1.3rem', '1.3rem', '0', '0']}
             paddingRight={['1.5rem', '1.5rem', '0', '0']}
             paddingLeft={['1.5rem', '1.5rem', '0', '0']}
-            lineHeight={['1.6rem', '1.6rem', '2rem', '2rem']}
+            lineHeight={['1.4rem', '1.3rem', '2.2rem', '2.6rem']}
+            fontWeight={700}
           >
             {t('motto')}
+          </Text>
+          <Text
+            fontSize={['1.2rem', '1.4rem', '2rem', '1.9rem']}
+            textAlign={['center', 'center', 'end', 'end']}
+            paddingBottom={['1.3rem', '1.3rem', '0', '0']}
+            paddingRight={['1.5rem', '1.5rem', '0', '0']}
+            paddingLeft={['1.5rem', '1.5rem', '0', '0']}
+            lineHeight={['0.5rem', '0.5rem', '2.2rem', '2.6rem']}
+            fontWeight={400}
+          >
+            {t('motto_subtitle')}
           </Text>
         </Box>
       </GridItem>

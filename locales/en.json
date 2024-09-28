@@ -1,9 +1,10 @@
 {
   "Banner": {
     "title": "PHILOMATH",
-    "text": "The Coding Academy for Frontend Engineers",
-    "motto": "Motto for Customers to convince them to buy the product",
-    "btn_join": "Join my courses"
+    "text": "Elevate your front-end skills with timeless and expertly crafted courses",
+    "motto": "Explore, Thrive and Create:",
+    "motto_subtitle": "Your Journey with Evangelia",
+    "btn_join": "Join our academy"
   },
   "HomePage": {
     "text": "Motto for Customers to convince them to buy the product",

@@ -12,7 +12,6 @@ export default function HomePage() {
             "footer"
             `}
       gridTemplateColumns={'1fr'}
-      gridTemplateRows={'30% 25% 35% 10%'}
       height="90vh"
     >
       <Header />

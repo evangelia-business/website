@@ -95,7 +95,7 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
       <GridItem order={{ base: 1, md: 2 }} margin="0 auto">
         <Box className={styles.titleRight} width="max-content">
           <Text
-            fontSize={['1.5rem', '1.7rem', '2.1rem', '2.4rem']}
+            fontSize={['1.5rem', '2.1rem', '2.1rem', '2.4rem']}
             textAlign={['center', 'center', 'end', 'end']}
             paddingTop={['0.5rem', '0.5rem', '0', '0']}
             paddingBottom={['1.3rem', '1.3rem', '0', '0']}
@@ -107,7 +107,7 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
             {t('motto')}
           </Text>
           <Text
-            fontSize={['1.2rem', '1.4rem', '2rem', '1.9rem']}
+            fontSize={['1.2rem', '1.6rem', '2rem', '1.9rem']}
             textAlign={['center', 'center', 'end', 'end']}
             paddingBottom={['1.3rem', '1.3rem', '0', '0']}
             paddingRight={['1.5rem', '1.5rem', '0', '0']}

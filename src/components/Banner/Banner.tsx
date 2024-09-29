@@ -72,7 +72,7 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
         <Box className={styles.titleRight} margin="0 auto" right={0}>
           <Text
             width={{ base: 'auto', sm: 'auto', md: 'auto', lg: 'auto' }}
-            fontSize={['2rem', '2.4rem', '2.6rem', '2.8rem']}
+            fontSize={['2.3rem', '2.4rem', '2.6rem', '2.8rem']}
             textAlign={['center', 'center', 'center', 'center']}
             paddingTop={['0.5rem', '0.5rem', '0', '0']}
             paddingBottom={['1.3rem', '1.3rem', '1rem', '1rem']}
@@ -85,7 +85,7 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
           </Text>
           <Text
             width={{ base: 'auto', sm: 'auto', md: 'auto', lg: 'auto' }}
-            fontSize={['1.2rem', '1.6rem', '1.7rem', '1.9rem']}
+            fontSize={['1.5rem', '1.6rem', '1.7rem', '1.9rem']}
             textAlign={['center', 'center', 'center', 'center']}
             paddingBottom={['1.3rem', '1.3rem', '0', '0']}
             paddingRight={0}

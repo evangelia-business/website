@@ -8,13 +8,14 @@
   },
   "HomePage": {
     "text": "Motto for Customers to convince them to buy the product",
-    "title": "Evangelia Umbrella Website",
-    "welcome": "Welcome to our website!",
-    "greeting": "Hello, {name}!",
-    "goodbye": "Goodbye!"
+    "title": "Evangelia Umbrella Website"
   },
   "Menu": {
     "home": "Home",
     "tech": "Philomath"
+  },
+  "Hello": {
+    "title": "Hello",
+    "description": " I am Evangelia, a multifaceted solopreneur dedicated to launching ventures that inspire growth and transformation. My work spans fourdistinct brands, all driven by a shared dedication to empowering individuals and fostering excellence across various fields, from technology and wellness to cultural understanding and creative expression."
   }
 }

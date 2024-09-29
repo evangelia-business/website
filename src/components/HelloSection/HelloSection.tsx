@@ -1,6 +1,8 @@
-import { Box, Flex, Text, Image } from '@chakra-ui/react'
+import { Flex, Text, Image } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 
 export default function HelloSection() {
+  const t = useTranslations('Hello')
   return (
     <Flex
       direction={['column', 'column', 'row']}
@@ -27,7 +29,7 @@ export default function HelloSection() {
           height="48px"
           color="#02e5f3"
         >
-          HELLO,
+          {t('title').toUpperCase()},
         </Text>
 
         <Text
@@ -37,14 +39,7 @@ export default function HelloSection() {
           width="100%"
           maxWidth="372px"
         >
-          <Text as="span">
-            I am Evangelia, a multifaceted solopreneur dedicated to launching
-            ventures that inspire growth and transformation. My work spans four
-            distinct brands, all driven by a shared dedication to empowering
-            individuals and fostering excellence across various fields, from
-            technology and wellness to cultural understanding and creative
-            expression.{' '}
-          </Text>
+          <Text as="span">{t('description')},</Text>
         </Text>
         <Flex
           gap="10px"

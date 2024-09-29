@@ -47,6 +47,7 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
         <Flex
           direction="column"
           alignItems={['center', 'center', 'start', 'start']}
+          paddingLeft={6}
         >
           <Flex
             direction="row"
@@ -92,14 +93,14 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
         </Flex>
       </GridItem>
 
-      <GridItem order={{ base: 1, md: 2 }} margin="0 auto">
-        <Box className={styles.titleRight} width="max-content">
+      <GridItem order={{ base: 1, md: 2 }}>
+        <Box className={styles.titleRight}>
           <Text
             fontSize={['1.5rem', '2.1rem', '2.1rem', '2.4rem']}
             textAlign={['center', 'center', 'end', 'end']}
             paddingTop={['0.5rem', '0.5rem', '0', '0']}
             paddingBottom={['1.3rem', '1.3rem', '0', '0']}
-            paddingRight={['1.5rem', '1.5rem', '0', '0']}
+            paddingRight={0}
             paddingLeft={['1.5rem', '1.5rem', '0', '0']}
             lineHeight={['1.4rem', '1.3rem', '2.2rem', '2.6rem']}
             fontWeight={700}
@@ -110,7 +111,7 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
             fontSize={['1.2rem', '1.6rem', '2rem', '1.9rem']}
             textAlign={['center', 'center', 'end', 'end']}
             paddingBottom={['1.3rem', '1.3rem', '0', '0']}
-            paddingRight={['1.5rem', '1.5rem', '0', '0']}
+            paddingRight={0}
             paddingLeft={['1.5rem', '1.5rem', '0', '0']}
             lineHeight={['0.5rem', '0.5rem', '2.2rem', '2.6rem']}
             fontWeight={400}

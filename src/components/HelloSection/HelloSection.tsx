@@ -84,7 +84,7 @@ export default function HelloSection() {
       <Image
         alt="Circle"
         src="/Circle_icons_circle_icons_dark_blue.svg"
-        boxSize={{ base: '72', md: '80', lg: '96' }}
+        boxSize={{ base: '72', md: '96', lg: '96' }}
         objectFit="cover"
         position="relative"
         zIndex="1"

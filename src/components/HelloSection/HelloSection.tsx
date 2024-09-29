@@ -7,39 +7,60 @@ export default function HelloSection() {
     <Flex
       direction={['column', 'column', 'row']}
       alignItems="center"
-      justifyContent="space-around"
-      width="100%"
+      justifyContent="space-between"
       textAlign="left"
-      fontSize="16px"
       color="#e6e6e6"
-      padding={24}
+      padding={12}
       gap={2}
     >
-      <Flex
-        direction="column"
-        position="relative"
-        top={{ base: '0', md: '-30%' }}
-      >
+      <Flex direction="column" fontWeight={500}>
         <Text
-          fontSize={['48px', '20px']}
-          lineHeight="150%"
-          fontWeight="500"
+          fontSize={{ base: 'large', md: 'x-large' }}
           display="flex"
           alignItems="center"
-          height="48px"
           color="#02e5f3"
+          paddingBottom={12}
         >
           {t('title').toUpperCase()},
         </Text>
 
         <Text
-          lineHeight="150%"
-          fontWeight="500"
+          fontSize={{ base: 'medium', md: 'large' }}
           display="inline-block"
-          width="100%"
-          maxWidth="372px"
+          width={{ base: '100%', md: '80%' }}
         >
-          <Text as="span">{t('description')},</Text>
+          <Text as="span">{t('description_init')}</Text>
+          <br />
+          <br />
+          <Text as="span">{t('description_tech_init')}</Text>
+          <Text as="span" color="var(--accent-hex)">
+            {t('technology')}
+          </Text>{' '}
+          <Text as="span">{t('description_after_technology')}</Text>
+          <br />
+          <br />
+          <Text as="span">{t('descrition_wellness_init')}</Text>
+          <Text as="span" color="#03ea94">
+            {t('wellness')}
+          </Text>{' '}
+          <Text as="span">{t('description_after_wellness')}</Text>
+          <br />
+          <br />
+          <Text as="span">{t('description_cultural_understanding_init')}</Text>
+          <Text as="span" color="#ff9f24">
+            {t('cultural_understanding')}.
+          </Text>
+          &nbsp;
+          <Text as="span">{t('description_after_cultural_understanding')}</Text>
+          <br />
+          <br />
+          <Text as="span">
+            {t('description_creative_expression_init')}
+          </Text>{' '}
+          <Text as="span" color="#B400FF">
+            {t('creative_expression')}
+          </Text>
+          <Text as="span">{t('description_after_creative_expression')}</Text>
         </Text>
         <Flex
           gap="10px"
@@ -65,11 +86,11 @@ export default function HelloSection() {
         display={{ base: 'none', md: 'block' }}
         alt="Circle"
         src="/Circle_icons_circle_icons_dark_blue.svg"
-        width="382px"
-        height="342px"
+        boxSize={{ base: '52', md: 'md', lg: 'lg' }}
         objectFit="cover"
         position="relative"
-        top="-45%"
+        top="-10%"
+        alignSelf="center"
       />
     </Flex>
   )

@@ -16,6 +16,18 @@
   },
   "Hello": {
     "title": "Hello",
-    "description": " I am Evangelia, a multifaceted solopreneur dedicated to launching ventures that inspire growth and transformation. My work spans fourdistinct brands, all driven by a shared dedication to empowering individuals and fostering excellence across various fields, from technology and wellness to cultural understanding and creative expression."
+    "description_init": " I am Evangelia, a multifaceted solopreneur dedicated to launching ventures that inspire growth and transformation. My work spans four distinct brands, all driven by a shared dedication to empowering individuals and fostering excellence across various fields.",
+    "description_tech_init": "In the realm of",
+    "technology": " technical know-how",
+    "description_after_technology": "I focus on upskilling frontend engineers with versatile and framework-agnostic skills, ensuring they are equipped to navigate future demands, including proficiency in AI and a solid understanding of core CS concepts and browser mechanics.",
+    "descrition_wellness_init": "Through my commitment to",
+    "wellness": " sustainable living.",
+    "description_after_wellness": "I offer a range of sustainable and recyclable products that promote a healthy body and an active lifestyle, encompassing activewear, skincare, and nutritious food options.",
+    "description_cultural_understanding_init": "In the area of",
+    "cultural_understanding": " cultural understanding",
+    "description_after_cultural_understanding": "I support individuals in navigating the challenges of living and moving across different countries, helping them embrace change and foster a successful expat experience.",
+    "description_creative_expression_init": " Lastly, my work in",
+    "creative_expression": " creative expression ",
+    "description_after_creative_expression": "aims to generate insightful content through interviews, documentaries, writings, and articles that provide visions, perspectives, and analytical insights into societal problems."
   }
 }

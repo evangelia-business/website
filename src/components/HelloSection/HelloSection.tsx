@@ -45,6 +45,8 @@ export default function HelloSection() {
             {t('wellness')}
           </Text>
           <Text as="span">{t('description_after_wellness')}</Text>
+          <br />
+          <br />
           <Text as="span">{t('description_cultural_understanding_init')}</Text>
           <Text as="span" color="#ff9f24">
             {t('cultural_understanding')}

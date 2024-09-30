@@ -1,8 +1,7 @@
 import { Grid } from '@chakra-ui/react'
 
 import Header from '@/components/Header/Header'
-import ProductsSection from '@/components/ProductsSection/ProductsSection'
-import { products } from '@/config/products'
+import Products from '@/components/Products/Products'
 export default function HomePage() {
   return (
     <Grid
@@ -15,11 +14,7 @@ export default function HomePage() {
       height="auto"
     >
       <Header />
-      <ProductsSection
-        products={products}
-        maxWidth="100%"
-        backgroundColor="transparent"
-      />
+      <Products />
     </Grid>
   )
 }

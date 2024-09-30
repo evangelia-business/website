@@ -43,13 +43,13 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
       direction="column"
       width="100%"
       padding={14}
-      gap={16}
+      gap={24}
       justifyContent="space-between"
       alignItems="center"
     >
       <Flex
         direction={{ base: 'column', md: 'row' }}
-        width={{ base: '100%', lg: '70%' }}
+        width={{ base: '100%', lg: '75%' }}
         gap={16}
         alignSelf="center"
         alignItems="center"
@@ -62,7 +62,7 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
       </Flex>
       <Flex
         direction={{ base: 'column', md: 'row' }}
-        width={{ base: '100%', lg: '70%' }}
+        width={{ base: '100%', lg: '75%' }}
         gap={16}
         alignSelf="center"
         alignItems="center"

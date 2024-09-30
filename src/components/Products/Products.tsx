@@ -13,7 +13,7 @@ type ColoredBoxProps = {
 const ColoredBox: React.FC<ColoredBoxProps> = ({ color }) => (
   <Box
     display={{ base: 'none', md: 'block' }}
-    width={8}
+    width={6}
     height={9}
     background={color}
     backgroundRepeat="repeat"

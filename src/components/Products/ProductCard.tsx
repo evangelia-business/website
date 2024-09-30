@@ -16,7 +16,13 @@ export const ProductCard: React.FC<Product> = ({
       </Text>
       <Image src={iconSrc} alt={`${title} icon`} boxSize={9} />
     </Flex>
-    <Text justifyContent="flex-start" flexGrow={1} height={16} fontSize="m">
+    <Text
+      justifyContent="flex-start"
+      flexGrow={1}
+      height={16}
+      fontSize="m"
+      maxWidth="400px"
+    >
       {description}
     </Text>
   </Flex>

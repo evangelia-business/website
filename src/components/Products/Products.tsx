@@ -6,6 +6,22 @@ import { ProductCard } from './ProductCard'
 
 import { useTranslations } from 'next-intl'
 
+type ColoredBoxProps = {
+  color: string
+}
+
+const ColoredBox: React.FC<ColoredBoxProps> = ({ color }) => (
+  <Box
+    display={{ base: 'none', md: 'block' }}
+    width={8}
+    height={9}
+    background={color}
+    backgroundRepeat="repeat"
+    justifySelf="center"
+    backgroundSize="12px 12px"
+  />
+)
+
 const ProductsSection: React.FC<ProductsSectionProps> = () => {
   const t = useTranslations('Products')
   const products: Product[] = [
@@ -67,43 +83,10 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
         width="100%"
         justifyContent="center"
       >
-        <Box
-          display={{ base: 'none', md: 'block' }}
-          width={8}
-          height={9}
-          background="var(--background-blue-dots)"
-          backgroundRepeat="repeat"
-          justifySelf="center"
-          backgroundSize="13px 13px"
-        />
-
-        <Box
-          display={{ base: 'none', md: 'block' }}
-          width={8}
-          height={9}
-          background="var(--background-purple-dots)"
-          backgroundRepeat="repeat"
-          justifySelf="center"
-          backgroundSize="13px 13px"
-        />
-        <Box
-          display={{ base: 'none', md: 'block' }}
-          width={8}
-          height={9}
-          background="var(--background-green-dots)"
-          backgroundRepeat="repeat"
-          justifySelf="center"
-          backgroundSize="13px 13px"
-        />
-        <Box
-          display={{ base: 'none', md: 'block' }}
-          width={8}
-          height={9}
-          background="var(--background-orange-dots)"
-          backgroundRepeat="repeat"
-          justifySelf="center"
-          backgroundSize="13px 13px"
-        />
+        <ColoredBox color="var(--background-blue-dots)" />
+        <ColoredBox color="var(--background-purple-dots)" />
+        <ColoredBox color="var(--background-green-dots)" />
+        <ColoredBox color="var(--background-orange-dots)" />
       </Flex>
       <Flex
         direction={{ base: 'column', md: 'row' }}

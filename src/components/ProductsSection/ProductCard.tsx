@@ -10,15 +10,13 @@ export const ProductCard: React.FC<Product> = ({
   iconSrc,
   color,
 }) => (
-  <Box className={styles.productCard}>
-    <Flex alignItems="center" mb={2}>
-      <Text color={color} fontWeight="bold" fontSize="xl" mr={2}>
+  <Flex direction="column" alignItems="center">
+    <Flex alignItems="center" pb={2}>
+      <Text color={color} fontWeight={550} fontSize="xl" height={8} mr={3}>
         {title}
       </Text>
-      <Image src={iconSrc} alt={`${title} icon`} width="24px" height="24px" />
+      <Image src={iconSrc} alt={`${title} icon`} boxSize={9} />
     </Flex>
-    <Text color="gray.300" fontSize="sm">
-      {description}
-    </Text>
-  </Box>
+    <Text fontSize="m">{description}</Text>
+  </Flex>
 )

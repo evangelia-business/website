@@ -15,5 +15,15 @@
   "Menu": {
     "home": "Home",
     "tech": "Philomath"
+  },
+  "Products": {
+    "philomath_title": " Philomath",
+    "philomath_description": "Develop versatile frontend engineering skills with practical, real-world training and expert guidance.",
+    "evexia_title": "Evexia",
+    "evexia_description": "Choose sustainable activewear and skincare for a healthier, more active you.",
+    "rhizes_title": "Rhizes",
+    "rhizes_description": "Get support with expert coaching for expats navigating cultural transitions and life changes.",
+    "ekphrasis_title": "Ekphrasis",
+    "ekphrasis_description": "Explore human experience through expressive writing, compelling short films, and insightful interviews, using art to voice the soul on issues like mental health and societal challenges."
   }
 }

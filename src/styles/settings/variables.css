@@ -5,4 +5,8 @@
   --green-hex: #03ea94;
   --orange-hex: #ff9f24;
   --purple-hex: #b400ff;
+  --background-blue-dots: radial-gradient(#00dcff 5%, transparent 0);
+  --background-purple-dots: radial-gradient(#b400ff 5%, transparent 0);
+  --background-orange-dots: radial-gradient(#ff9f24 5%, transparent 0);
+  --background-green-dots: radial-gradient(#03ea94 5%, transparent 0);
 }

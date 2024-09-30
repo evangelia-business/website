@@ -43,7 +43,7 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
       direction="column"
       width="100%"
       padding={14}
-      gap={24}
+      gap={12}
       justifyContent="space-between"
       alignItems="center"
     >
@@ -59,6 +59,51 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
             <ProductCard {...product} />
           </Box>
         ))}
+      </Flex>
+      <Flex
+        display={{ base: 'none', md: 'flex' }}
+        direction="row"
+        paddingY={8}
+        width="100%"
+        justifyContent="center"
+      >
+        <Box
+          display={{ base: 'none', md: 'block' }}
+          width={8}
+          height={9}
+          background="var(--background-blue-dots)"
+          backgroundRepeat="repeat"
+          justifySelf="center"
+          backgroundSize="13px 13px"
+        />
+
+        <Box
+          display={{ base: 'none', md: 'block' }}
+          width={8}
+          height={9}
+          background="var(--background-purple-dots)"
+          backgroundRepeat="repeat"
+          justifySelf="center"
+          backgroundSize="13px 13px"
+        />
+        <Box
+          display={{ base: 'none', md: 'block' }}
+          width={8}
+          height={9}
+          background="var(--background-green-dots)"
+          backgroundRepeat="repeat"
+          justifySelf="center"
+          backgroundSize="13px 13px"
+        />
+        <Box
+          display={{ base: 'none', md: 'block' }}
+          width={8}
+          height={9}
+          background="var(--background-orange-dots)"
+          backgroundRepeat="repeat"
+          justifySelf="center"
+          backgroundSize="13px 13px"
+        />
       </Flex>
       <Flex
         direction={{ base: 'column', md: 'row' }}

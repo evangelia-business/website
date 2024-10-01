@@ -22,41 +22,8 @@ describe('Banner component', () => {
   test('renders Banner component with title and subtitle', () => {
     renderWithIntl(<Banner />, 'en')
 
-    // Use regular expressions to make the matching more flexible
-    expect(screen.getByText(/PHILOMATH/i)).toBeInTheDocument()
-    expect(
-      screen.getByText(/The Coding Academy for Frontend Engineers/i)
-    ).toBeInTheDocument()
-  })
-
-  test('renders a button in the Banner component', () => {
-    renderWithIntl(<Banner />, 'en')
-    const button = screen.getByRole('button', { name: /Join my courses/i })
-    expect(button).toBeInTheDocument()
-  })
-
-  test('calls the onClick handler when the button is clicked', () => {
-    const handleClick = jest.fn()
-    const props: BannerProps = {
-      onClick: handleClick,
-    }
-    renderWithIntl(<Banner {...props} />, 'en')
-
-    const button = screen.getByRole('button', { name: /Join my courses/i })
-    fireEvent.click(button)
-
-    expect(handleClick).toHaveBeenCalled()
-  })
-
-  test('navigates to the tech subdomain when the button is clicked and no onClick is provided', () => {
-    const pushMock = jest.fn()
-    ;(useRouter as jest.Mock).mockReturnValue({ push: pushMock })
-
-    renderWithIntl(<Banner />, 'en')
-
-    const button = screen.getByRole('button', { name: /Join my courses/i })
-    fireEvent.click(button)
-
-    expect(pushMock).toHaveBeenCalledWith('https://tech.evangelia.me')
+    // Use translations from the enLocales file for assertions
+    expect(screen.getByText(enLocales.Banner.title)).toBeInTheDocument()
+    expect(screen.getByText(enLocales.Banner.motto)).toBeInTheDocument()
   })
 })

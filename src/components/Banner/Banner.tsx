@@ -15,14 +15,9 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
   const t = useTranslations('Banner')
 
   return (
-    <Grid templateColumns={'1'} className={styles.bannerContainer}>
+    <Grid templateColumns="1fr" className={styles.bannerContainer}>
       <GridItem>
-        <Box
-          className={styles.titleRight}
-          margin="0 auto"
-          right={0}
-          textAlign="center"
-        >
+        <Box className={styles.titleRight} margin="0 auto" textAlign="center">
           <Text
             width="auto"
             fontSize={['2.3rem', '2.4rem', '2.6rem', '2.8rem']}

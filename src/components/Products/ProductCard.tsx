@@ -14,7 +14,7 @@ export const ProductCard: React.FC<Product> = ({
       <Text color={color} fontWeight={550} fontSize="xl" height={8} mr={3}>
         {title}
       </Text>
-      <Image src={iconSrc} alt={`${title} icon`} boxSize={9} />
+      <Image src={iconSrc} alt={`${title} icon`} boxSize={8} />
     </Flex>
     <Text
       justifyContent="flex-start"

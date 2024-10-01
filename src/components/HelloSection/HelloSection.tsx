@@ -27,7 +27,7 @@ export default function HelloSection() {
         <Flex
           fontSize={{ base: 'medium', md: 'large' }}
           display="block"
-          width={{ base: '100%', md: '32rem', lg: '32rem' }}
+          width={{ base: '100%', md: 'auto', lg: '32rem' }}
         >
           <Text>{t('description_init')}</Text>
           <br />

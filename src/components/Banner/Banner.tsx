@@ -35,31 +35,6 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
       }}
       className={styles.bannerContainer}
     >
-      <GridItem order={{ base: 2, md: 2, lg: 1 }}>
-        <Flex
-          direction="column"
-          alignItems={['center', 'center', 'center', 'center']}
-          paddingLeft={6}
-        >
-          <Flex
-            direction="row"
-            justifyContent={['center', 'center', 'center', 'center']}
-            display={{ base: 'none', md: 'none', lg: 'none' }}
-          >
-            <Box className={styles.titleLeft}>
-              <Text>{t('title')} </Text>
-            </Box>
-            <Image
-              className={styles.techIcon}
-              src="/tech.svg"
-              width="25"
-              height="25"
-              alt="Company Logo"
-            />
-          </Flex>
-        </Flex>
-      </GridItem>
-
       <GridItem order={{ base: 1, md: 1, lg: 1 }}>
         <Box className={styles.titleRight} margin="0 auto" right={0}>
           <Text

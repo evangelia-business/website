@@ -1,4 +1,4 @@
-import { Flex, Text, Image, Box } from '@chakra-ui/react'
+import { Flex, Text, Image } from '@chakra-ui/react'
 import { useTranslations } from 'next-intl'
 
 export default function HelloSection() {
@@ -84,7 +84,7 @@ export default function HelloSection() {
       <Image
         alt="Circle"
         src="/Circle_icons_circle_icons_dark_blue.svg"
-        boxSize={{ base: '72', md: '96', lg: '96' }}
+        boxSize={{ base: '72', md: '96' }}
         objectFit="cover"
         position="relative"
         zIndex="1"

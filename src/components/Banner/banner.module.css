@@ -2,19 +2,6 @@
   @apply ml-6 pt-16;
 }
 
-.titleLeft-structure {
-  @apply mr-3 pb-2 leading-6;
-}
-
-.titleLeft-skin {
-  color: var(--accent-hex);
-  @apply text-xl font-semibold;
-}
-
-.titleLeft {
-  composes: titleLeft-structure titleLeft-skin;
-}
-
 .titleRight-structure {
   width: 37rem;
   @apply mr-8 w-auto text-end leading-10 tracking-widest;

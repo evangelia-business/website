@@ -44,7 +44,7 @@ export default function HelloSection() {
           <br />
           <br />
           <Text as="span">{t('description_cultural_understanding_init')}</Text>
-          <Text as="span" color="var(--organge-hex)">
+          <Text as="span" color="var(--orange-hex)">
             {t('cultural_understanding')}
           </Text>
           &nbsp;

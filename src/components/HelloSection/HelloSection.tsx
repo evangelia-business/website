@@ -9,7 +9,7 @@ export default function HelloSection() {
       alignItems="center"
       justifyContent="space-between"
       textAlign="left"
-      color="#e6e6e6"
+      color="var(--foreground-hex)"
       paddingX="12"
       paddingY="7"
       fontWeight={500}
@@ -20,7 +20,7 @@ export default function HelloSection() {
           fontSize={{ base: 'large', md: 'x-large' }}
           display="flex"
           alignItems="center"
-          color="#02e5f3"
+          color="var(--accent-hex)"
           paddingBottom={12}
           position="relative"
           zIndex="10"
@@ -31,7 +31,7 @@ export default function HelloSection() {
         <Flex
           fontSize={{ base: 'medium', md: 'large' }}
           display="inline-block"
-          width={{ base: '100%', md: '100%', lg: '80%' }}
+          width={{ base: '100%', lg: '80%' }}
         >
           <Text>{t('description_init')}</Text>
           <br />
@@ -41,14 +41,14 @@ export default function HelloSection() {
           </Text>
           <Text as="span">{t('description_after_technology')}</Text>
           <Text as="span">{t('descrition_wellness_init')}</Text>
-          <Text as="span" color="#03ea94">
+          <Text as="span" color="var(--green-hex)">
             {t('wellness')}
           </Text>
           <Text as="span">{t('description_after_wellness')}</Text>
           <br />
           <br />
           <Text as="span">{t('description_cultural_understanding_init')}</Text>
-          <Text as="span" color="#ff9f24">
+          <Text as="span" color="var(--organge-hex)">
             {t('cultural_understanding')}
           </Text>
           &nbsp;
@@ -56,28 +56,14 @@ export default function HelloSection() {
           <Text as="span">
             {t('description_creative_expression_init')}
           </Text>{' '}
-          <Text as="span" color="#B400FF">
+          <Text as="span" color="var(--purple-hex)">
             {t('creative_expression')}
           </Text>
           <Text as="span">{t('description_after_creative_expression')}</Text>
         </Flex>
-        <Flex
-          gap={2}
-          marginTop="20px"
-          justifyContent={['flex-start', 'flex-start', 'flex-start']}
-        >
-          <Image
-            alt="YouTube icon"
-            src="/hello-icon-youtube.svg"
-            width="26px"
-            height="16px"
-          />
-          <Image
-            alt="Mic icon"
-            src="/icon-mic.svg"
-            width="14px"
-            height="14px"
-          />
+        <Flex gap={2} marginTop="20px" justifyContent="flex-start">
+          <Image alt="YouTube icon" src="/hello-icon-youtube.svg" boxSize={6} />
+          <Image alt="Mic icon" src="/icon-mic.svg" boxSize={6} />
         </Flex>
       </Flex>
 

@@ -1,9 +1,8 @@
 import '@testing-library/jest-dom'
 import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import Banner, { BannerProps } from './Banner'
+import { render, screen } from '@testing-library/react'
+import Banner from './Banner'
 import { NextIntlClientProvider } from 'next-intl'
-import { useRouter } from 'next/navigation'
 import enLocales from '@/locales/en.json'
 
 jest.mock('next/navigation', () => ({
@@ -23,7 +22,9 @@ describe('Banner component', () => {
     renderWithIntl(<Banner />, 'en')
 
     // Use translations from the enLocales file for assertions
-    expect(screen.getByText(enLocales.Banner.title)).toBeInTheDocument()
     expect(screen.getByText(enLocales.Banner.motto)).toBeInTheDocument()
+    expect(
+      screen.getByText(enLocales.Banner.motto_subtitle)
+    ).toBeInTheDocument()
   })
 })

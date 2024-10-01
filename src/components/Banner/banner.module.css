@@ -15,7 +15,3 @@
 .titleRight {
   composes: titleRight-structure titleRight-skin;
 }
-
-img.techIcon {
-  height: 28px;
-}

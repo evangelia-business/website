@@ -35,7 +35,7 @@ const Banner: FC<BannerProps> = ({ onClick }) => {
       }}
       className={styles.bannerContainer}
     >
-      <GridItem order={{ base: 1, md: 1, lg: 1 }}>
+      <GridItem>
         <Box className={styles.titleRight} margin="0 auto" right={0}>
           <Text
             width={{ base: 'auto', sm: 'auto', md: 'auto', lg: 'auto' }}

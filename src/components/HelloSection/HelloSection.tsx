@@ -7,7 +7,7 @@ export default function HelloSection() {
     <Flex
       direction={['column', 'column', 'column', 'row']}
       alignItems="center"
-      justifyContent="space-between"
+      justifyContent="space-around"
       textAlign="left"
       color="var(--foreground-hex)"
       paddingX="12"
@@ -18,20 +18,17 @@ export default function HelloSection() {
       <Flex direction="column">
         <Text
           fontSize={{ base: 'large', md: 'x-large' }}
-          display="flex"
-          alignItems="center"
           color="var(--accent-hex)"
           paddingBottom={12}
-          position="relative"
-          zIndex="10"
         >
           {t('title').toUpperCase()},
         </Text>
 
         <Flex
           fontSize={{ base: 'medium', md: 'large' }}
-          display="inline-block"
+          display="block"
           width={{ base: '100%', lg: '80%' }}
+          maxWidth="55rem"
         >
           <Text>{t('description_init')}</Text>
           <br />
@@ -71,10 +68,9 @@ export default function HelloSection() {
         alt="Circle"
         src="/Circle_icons_circle_icons_dark_blue.svg"
         boxSize={{ base: '72', md: '96' }}
-        objectFit="cover"
         position="relative"
-        zIndex="1"
         top={{ base: '0', lg: '10%' }}
+        left={{ base: '0', lg: '-7%' }}
         alignSelf={{ base: 'center', lg: 'flex-start' }}
       />
     </Flex>

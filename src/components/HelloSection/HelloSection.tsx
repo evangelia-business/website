@@ -1,4 +1,4 @@
-import { Flex, Text, Image } from '@chakra-ui/react'
+import { Flex, Text, Image, Box } from '@chakra-ui/react'
 import { useTranslations } from 'next-intl'
 
 export default function HelloSection() {

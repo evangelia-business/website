@@ -2,22 +2,8 @@
   @apply ml-6 pt-16;
 }
 
-.titleLeft-structure {
-  @apply mr-3 leading-6;
-}
-
-.titleLeft-skin {
-  color: var(--accent-hex);
-  @apply text-lg font-normal;
-}
-
-.titleLeft {
-  composes: titleLeft-structure titleLeft-skin;
-}
-
 .titleRight-structure {
-  width: 35rem;
-  @apply mr-8 w-auto text-end leading-10 tracking-widest;
+  @apply w-auto leading-10 tracking-widest;
 }
 
 .titleRight-skin {
@@ -27,8 +13,4 @@
 
 .titleRight {
   composes: titleRight-structure titleRight-skin;
-}
-
-img.techIcon {
-  height: 28px;
 }

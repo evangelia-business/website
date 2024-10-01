@@ -1,19 +1,28 @@
 {
   "Banner": {
-    "title": "PHILOMATH",
-    "text": "The Coding Academy for Frontend Engineers",
-    "motto": "Motto for Customers to convince them to buy the product",
-    "btn_join": "Join my courses"
-  },
-  "HomePage": {
-    "text": "Motto for Customers to convince them to buy the product",
-    "title": "Evangelia Umbrella Website",
-    "welcome": "Welcome to our website!",
-    "greeting": "Hello, {name}!",
-    "goodbye": "Goodbye!"
+    "text": "Elevate your front-end skills with timeless & expertly crafted courses",
+    "motto": "Explore, Thrive and Create.",
+    "motto_subtitle": "Your Journey with Evangelia",
+    "btn_join": "Join our academy"
   },
   "Menu": {
     "home": "Home",
     "tech": "Philomath"
+  },
+  "Hello": {
+    "title": "Hello",
+    "description_init": "I am Evangelia, a multifaceted solopreneur launching ventures that inspire growth and transformation across four distinct brands, all dedicated to empowering individuals and fostering excellence.",
+    "description_tech_init": "In the realm of",
+    "technology": " technical know-how ",
+    "description_after_technology": "I upskill frontend engineers with versatile, framework-agnostic skills, focusing on browser mechanics, core concepts, and AI integration in frontend development.",
+    "descrition_wellness_init": " Through my commitment to",
+    "wellness": " sustainable living ",
+    "description_after_wellness": "I offer a range of recyclable products that promote a healthy body and active lifestyle, including activewear, skincare, and nutritious food.",
+    "description_cultural_understanding_init": " In",
+    "cultural_understanding": " cultural understanding",
+    "description_after_cultural_understanding": "I help individuals navigate the challenges of living in different countries, empowering them to embrace change and succeed as expats.",
+    "description_creative_expression_init": " Lastly, my work in",
+    "creative_expression": " creative expression",
+    "description_after_creative_expression": " aims to generate insightful content through interviews, documentaries, and articles that explore societal issues and perspectives."
   }
 }

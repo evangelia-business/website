@@ -9,7 +9,8 @@ export default function Header() {
   return (
     <Grid
       className={styles.background}
-      backgroundSize={['cover', 'cover', 'auto', 'auto']}
+      height={{ base: 80, sm: 72 }}
+      backgroundSize={['cover', 'cover', 'contain', 'contain']}
     >
       <GridItem w="100%" h="0" colStart={1}>
         <Flex gap="1" alignItems="top">

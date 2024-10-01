@@ -4,7 +4,7 @@
 
 .titleRight-structure {
   width: 37rem;
-  @apply mr-8 w-auto text-end leading-10 tracking-widest;
+  @apply mr-8 w-auto leading-10 tracking-widest;
 }
 
 .titleRight-skin {

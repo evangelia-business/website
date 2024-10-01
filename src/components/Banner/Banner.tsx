@@ -2,15 +2,7 @@
 
 import { FC } from 'react'
 import { useRouter } from 'next/navigation'
-import {
-  Flex,
-  Box,
-  Button,
-  Image,
-  Text,
-  Grid,
-  GridItem,
-} from '@chakra-ui/react'
+import { Flex, Box, Image, Text, Grid, GridItem } from '@chakra-ui/react'
 
 import { useTranslations } from 'next-intl'
 

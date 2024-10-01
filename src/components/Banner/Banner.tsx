@@ -1,16 +1,7 @@
 'use client'
 
 import { FC } from 'react'
-import { useRouter } from 'next/navigation'
-import {
-  Flex,
-  Box,
-  Button,
-  Image,
-  Text,
-  Grid,
-  GridItem,
-} from '@chakra-ui/react'
+import { Box, Text, Grid, GridItem } from '@chakra-ui/react'
 
 import { useTranslations } from 'next-intl'
 
@@ -23,85 +14,26 @@ export interface BannerProps {
 const Banner: FC<BannerProps> = ({ onClick }) => {
   const t = useTranslations('Banner')
 
-  const router = useRouter()
-
-  // Default handler that navigates to the tech subdomain
-  const handleClick = () => {
-    if (onClick) {
-      onClick()
-    } else {
-      router.push('https://tech.evangelia.me')
-    }
-  }
   return (
-    <Grid
-      templateColumns={{
-        base: '1fr',
-        md: '1fr 2fr',
-        lg: '2fr 3fr',
-        xl: '2fr 2fr',
-      }}
-      className={styles.bannerContainer}
-    >
-      <GridItem order={{ base: 2, md: 1 }}>
-        <Flex
-          direction="column"
-          alignItems={['center', 'center', 'start', 'start']}
-        >
-          <Flex
-            direction="row"
-            justifyContent={['center', 'center', 'flex-start', 'flex-start']}
-            display={{ base: 'none', md: 'flex' }}
-          >
-            <Box className={styles.titleLeft}>
-              <Text>{t('title')} </Text>
-            </Box>
-            <Image
-              className={styles.techIcon}
-              src="/tech.svg"
-              width="25"
-              height="25"
-              alt="Company Logo"
-            />
-          </Flex>
-          <Box
-            className={styles.subTitleLeft}
-            paddingBottom={['0.5rem', '0.5rem', '0.8rem', '2.5rem']}
-          >
-            <Text
-              fontSize={['0.9rem', '1.125rem', '1.125rem', '1.125rem']}
-              display={{ base: 'none', md: 'block' }}
-            >
-              {t('text')}
-            </Text>
-          </Box>
-          <Box textAlign={['center', 'center', 'left', 'left']}>
-            <Button
-              role="button"
-              name="join-courses"
-              colorScheme="brand"
-              bg="primary"
-              size="xs"
-              onClick={handleClick} // Add onClick prop to the Button component
-            >
-              {t('btn_join')}
-            </Button>
-          </Box>
-        </Flex>
-      </GridItem>
-
-      <GridItem order={{ base: 1, md: 2 }}>
-        <Box className={styles.titleRight}>
+    <Grid templateColumns="1fr" className={styles.bannerContainer}>
+      <GridItem>
+        <Box className={styles.titleRight} margin="0 auto" textAlign="center">
           <Text
-            fontSize={['1.5rem', '1.5rem', '1.6rem', '1.875rem']}
-            textAlign={['center', 'center', 'end', 'end']}
-            paddingTop={['0.5rem', '0.5rem', '0', '0']}
-            paddingBottom={['1.3rem', '1.3rem', '0', '0']}
-            paddingRight={['1.5rem', '1.5rem', '0', '0']}
-            paddingLeft={['1.5rem', '1.5rem', '0', '0']}
-            lineHeight={['1.6rem', '1.6rem', '2rem', '2rem']}
+            width="auto"
+            fontSize={['2.3rem', '2.4rem', '2.6rem', '2.8rem']}
+            paddingBottom={['1.3rem', '1.3rem', '1rem', '1rem']}
+            lineHeight={['2.5rem', '2.5rem', '2.2rem', '2.6rem']}
+            fontWeight={700}
           >
             {t('motto')}
+          </Text>
+          <Text
+            width="auto"
+            fontSize={['1.5rem', '1.6rem', '1.7rem', '1.9rem']}
+            lineHeight={['1.4rem', '1.4rem', '2.2rem', '2.6rem']}
+            fontWeight={400}
+          >
+            {t('motto_subtitle')}
           </Text>
         </Box>
       </GridItem>

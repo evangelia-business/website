@@ -10,7 +10,7 @@ export const ProductCard: React.FC<Product> = ({
   color,
 }) => (
   <Flex direction="column" alignItems="center" justifyContent="flex-start">
-    <Flex alignItems="center" pb={2}>
+    <Flex alignItems="center" pb={4}>
       <Text color={color} fontWeight={550} fontSize="xl" height={8} mr={3}>
         {title}
       </Text>
@@ -20,7 +20,7 @@ export const ProductCard: React.FC<Product> = ({
       justifyContent="flex-start"
       flexGrow={1}
       height={16}
-      fontSize="m"
+      fontSize="large"
       maxWidth="400px"
     >
       {description}

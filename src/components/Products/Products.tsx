@@ -58,20 +58,23 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
     <Flex
       direction="column"
       width="100%"
-      padding={14}
+      paddingY={24}
+      paddingX={{ base: 0, md: 14 }}
       gap={12}
-      justifyContent="space-between"
+      justifyContent="center"
       alignItems="center"
+      borderTop="1px solid var(--foreground-hex)"
     >
       <Flex
         direction={{ base: 'column', md: 'row' }}
-        width={{ base: '100%', lg: '75%' }}
-        gap={16}
+        width={{ base: '100%', lg: '57rem' }}
+        gap={10}
+        justifyContent="space-between"
         alignSelf="center"
         alignItems="center"
       >
         {topRowProducts.map((product, index) => (
-          <Box key={index} flex={1} paddingX={{ base: 0, md: 5 }}>
+          <Box key={index}>
             <ProductCard {...product} />
           </Box>
         ))}
@@ -90,13 +93,14 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
       </Flex>
       <Flex
         direction={{ base: 'column', md: 'row' }}
-        width={{ base: '100%', lg: '75%' }}
-        gap={16}
-        alignSelf="center"
-        alignItems="center"
+        width={{ base: '100%', lg: '57rem' }}
+        gap={10}
+        //alignSelf="center"
+        //alignItems="center"
+        justifyContent="space-between"
       >
         {bottomRowProducts.map((product, index) => (
-          <Box key={index} flex={1} paddingX={{ base: 0, md: 5 }}>
+          <Box key={index}>
             <ProductCard {...product} />
           </Box>
         ))}

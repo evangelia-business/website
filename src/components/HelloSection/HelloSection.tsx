@@ -67,10 +67,6 @@ export default function HelloSection() {
         alt="Circle"
         src="/Circle_icons_circle_icons_dark_blue.svg"
         boxSize={{ base: '72', md: '96' }}
-        // position="relative"
-        //top={{ base: '0', lg: '10%' }}
-        // left={{ base: '0', lg: '-7%' }}
-        // alignSelf={{ base: 'center', lg: 'flex-start' }}
       />
     </Flex>
   )

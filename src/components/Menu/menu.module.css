@@ -8,6 +8,7 @@ a.menuItem {
 
   &:first-child {
     @apply underline;
+    color: var(--accent-hex);
   }
   &:last-child {
     @apply mr-10;

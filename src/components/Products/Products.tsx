@@ -95,8 +95,6 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
         direction={{ base: 'column', md: 'row' }}
         width={{ base: '100%', lg: '57rem' }}
         gap={10}
-        //alignSelf="center"
-        //alignItems="center"
         justifyContent="space-between"
       >
         {bottomRowProducts.map((product, index) => (

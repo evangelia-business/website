@@ -78,18 +78,6 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
         ))}
       </Flex>
       <Flex
-        display={{ base: 'none', md: 'flex' }}
-        direction="row"
-        paddingY={8}
-        width="100%"
-        justifyContent="center"
-      >
-        <ColoredBox color="var(--background-blue-dots)" />
-        <ColoredBox color="var(--background-purple-dots)" />
-        <ColoredBox color="var(--background-green-dots)" />
-        <ColoredBox color="var(--background-orange-dots)" />
-      </Flex>
-      <Flex
         direction={{ base: 'column', md: 'row' }}
         width={{ base: '100%', lg: '57rem' }}
         gap={10}

@@ -28,24 +28,28 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
       description: t('philomath_description'),
       iconSrc: '/tech.svg',
       color: 'var(--accent-hex)',
+      targetLink: 'https://tech.evangelia.me',
     },
     {
       title: t('evexia_title').toUpperCase(),
       description: t('evexia_description'),
       iconSrc: '/Evangelia-Icons_e_commerce.svg',
       color: 'var(--green-hex)',
+      targetLink: '',
     },
     {
       title: t('rhizes_title').toUpperCase(),
       description: t('rhizes_description'),
       iconSrc: '/Evangelia-Icons_global_citizen.svg',
       color: 'var(--orange-hex)',
+      targetLink: '',
     },
     {
       title: t('ekphrasis_title').toUpperCase(),
       description: t('ekphrasis_description'),
       iconSrc: '/Evangelia-Icons_art_and_expression.svg',
       color: 'var(--purple-hex)',
+      targetLink: '',
     },
   ]
 

@@ -6,6 +6,7 @@ declare global {
     description: string
     iconSrc: string
     color: string
+    targetLink: string
   }
 
   interface ProductsSectionProps {

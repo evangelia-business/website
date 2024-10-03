@@ -1,0 +1,18 @@
+.productcard h2:hover,
+.productcard p:hover {
+  cursor: pointer; /* Change cursor to pointer on hover */
+  color: #b0c4de; /* Change text color to your brand color on hover */
+}
+
+.productcard {
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.productcard:hover {
+  background-color: #4c5466; /* Change to light grayish blue on hover */
+  @apply no-underline; /* Remove underline on hover */
+}
+
+a.productItem:hover {
+  @apply no-underline;
+}

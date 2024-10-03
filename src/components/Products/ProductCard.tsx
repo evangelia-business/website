@@ -9,7 +9,12 @@ export const ProductCard: React.FC<Product> = ({
   iconSrc,
   color,
 }) => (
-  <Flex direction="column" alignItems="center" justifyContent="flex-start">
+  <Flex
+    direction="column"
+    alignItems="center"
+    justifyContent="flex-start"
+    paddingBottom={{ base: 16, md: 'none' }}
+  >
     <Flex alignItems="center" pb={4}>
       <Text color={color} fontWeight={550} fontSize="xl" height={8} mr={3}>
         {title}
@@ -20,7 +25,7 @@ export const ProductCard: React.FC<Product> = ({
       justifyContent="flex-start"
       flexGrow={1}
       height={16}
-      fontSize="large"
+      fontSize={{ base: 'medium', md: 'large' }}
       maxWidth="400px"
     >
       {description}

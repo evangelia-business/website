@@ -63,7 +63,7 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
       gap={12}
       justifyContent="center"
       alignItems="center"
-      borderTop="1px solid var(--foreground-hex)"
+      background="#2B2E3B"
     >
       <Flex
         direction={{ base: 'column', md: 'row' }}

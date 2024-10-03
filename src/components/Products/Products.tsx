@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Box } from '@chakra-ui/react'
+import { Flex, Box, Text } from '@chakra-ui/react'
 import { ProductCard } from './ProductCard'
 
 import { useTranslations } from 'next-intl'
@@ -56,13 +56,17 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
     <Flex
       direction="column"
       width="100%"
-      paddingY={24}
+      paddingBottom={24}
+      paddingTop={20}
       paddingX={{ base: 0, md: 14 }}
       gap={12}
       justifyContent="center"
       alignItems="center"
       background="#2B2E3B"
     >
+      <Text as="h1" fontSize={28} paddingBottom={14} fontWeight={500}>
+        {t('title').toUpperCase()}
+      </Text>
       <Flex
         direction={{ base: 'column', md: 'row' }}
         width={{ base: '100%', lg: '57rem' }}
@@ -70,6 +74,7 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
         justifyContent="space-between"
         alignSelf="center"
         alignItems="center"
+        paddingBottom={{ base: 0, md: 8 }}
       >
         {topRowProducts.map((product, index) => (
           <Box key={index}>

@@ -1,8 +1,8 @@
 import { Grid } from '@chakra-ui/react'
 
 import Header from '@/components/Header/Header'
-import HelloSection from '@/components/HelloSection/HelloSection'
-
+import Products from '@/components/Products/Products'
+import HelloSection from '../HelloSection/HelloSection'
 export default function HomePage() {
   return (
     <Grid
@@ -12,10 +12,11 @@ export default function HomePage() {
             "footer"
             `}
       gridTemplateColumns={'1fr'}
-      height="90vh"
+      height="auto"
     >
       <Header />
       <HelloSection />
+      <Products />
     </Grid>
   )
 }

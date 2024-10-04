@@ -7,13 +7,13 @@ export default function HelloSection() {
     <Flex
       direction={['column', 'column', 'column', 'row']}
       alignItems="center"
-      justifyContent="space-around"
+      justifyContent="center"
       textAlign="left"
       color="var(--foreground-hex)"
-      paddingX="12"
-      paddingY="7"
+      paddingX={12}
+      paddingY={20}
       fontWeight={500}
-      gap={2}
+      gap={12}
     >
       <Flex direction="column">
         <Text
@@ -27,7 +27,7 @@ export default function HelloSection() {
         <Flex
           fontSize={{ base: 'medium', md: 'large' }}
           display="block"
-          width={{ base: '100%', lg: '80%' }}
+          width={{ base: '100%', md: 'auto', lg: '32rem' }}
           maxWidth="55rem"
         >
           <Text>{t('description_init')}</Text>
@@ -45,7 +45,7 @@ export default function HelloSection() {
           <br />
           <br />
           <Text as="span">{t('description_cultural_understanding_init')}</Text>
-          <Text as="span" color="var(--organge-hex)">
+          <Text as="span" color="var(--orange-hex)">
             {t('cultural_understanding')}
           </Text>
           &nbsp;
@@ -68,10 +68,6 @@ export default function HelloSection() {
         alt="Circle"
         src="/Circle_icons_circle_icons_dark_blue.svg"
         boxSize={{ base: '72', md: '96' }}
-        position="relative"
-        top={{ base: '0', lg: '10%' }}
-        left={{ base: '0', lg: '-7%' }}
-        alignSelf={{ base: 'center', lg: 'flex-start' }}
       />
     </Flex>
   )

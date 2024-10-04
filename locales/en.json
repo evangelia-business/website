@@ -24,5 +24,16 @@
     "description_creative_expression_init": " Lastly, my work in",
     "creative_expression": " creative expression",
     "description_after_creative_expression": " aims to generate insightful content through interviews, documentaries, and articles that explore societal issues and perspectives."
+  },
+  "Products": {
+    "title": "Explore Our Ventures",
+    "philomath_title": " Philomath",
+    "philomath_description": "Develop versatile frontend engineering skills through practical, real-world training and expert guidance that prepares you for industry challenges.",
+    "evexia_title": "Evexia",
+    "evexia_description": "Choose sustainable activewear and skincare products that promote a healthier, more active lifestyle while caring for the planet.",
+    "rhizes_title": "Rhizes",
+    "rhizes_description": "Receive personalized coaching and support for expats navigating cultural transitions and life changes, ensuring a smoother adjustment to new environments.",
+    "ekphrasis_title": "Ekphrasis",
+    "ekphrasis_description": "Foster awareness of critical societal issues through expressive writing, compelling films, and insightful interviews that explore the complexities of the human experience."
   }
 }

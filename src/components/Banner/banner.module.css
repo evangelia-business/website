@@ -1,0 +1,16 @@
+.bannerContainer {
+  @apply ml-6 pt-16;
+}
+
+.titleRight-structure {
+  @apply w-auto leading-10 tracking-widest;
+}
+
+.titleRight-skin {
+  color: var(--foreground-hex);
+  @apply font-medium uppercase;
+}
+
+.titleRight {
+  composes: titleRight-structure titleRight-skin;
+}

@@ -1,0 +1,39 @@
+.productsSection {
+  width: 100%;
+  padding: 20px;
+  color: #e6e6e6;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.productWrapper {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .productsSection {
+    padding: 0;
+    height: auto;
+  }
+
+  .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 38px;
+    margin-left: 325px;
+    max-width: calc(100% - 325px);
+  }
+
+  .productWrapper {
+    width: calc(50% - 10px);
+    margin-right: 20px;
+  }
+
+  .productWrapper:nth-child(2n) {
+    margin-right: 0;
+  }
+}

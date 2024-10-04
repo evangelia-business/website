@@ -7,6 +7,7 @@ declare global {
     iconSrc: string
     color: string
     targetLink: string
+    isLaunched: boolean
   }
 
   interface ProductsSectionProps {

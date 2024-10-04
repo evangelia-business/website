@@ -10,6 +10,7 @@ export const ProductCard: React.FC<Product> = ({
   iconSrc,
   color,
   targetLink,
+  isLaunched,
 }) => (
   <Flex
     direction="column"
@@ -26,22 +27,35 @@ export const ProductCard: React.FC<Product> = ({
       </Text>
       <Image src={iconSrc} alt={`${title} icon`} boxSize={8} />
     </Flex>
-    <Link
-      as={NextLink}
-      data-testid="philomath-link"
-      href={targetLink}
-      className={styles.productItem}
-    >
+    {isLaunched ? (
+      <Link
+        as={NextLink}
+        data-testid="philomath-link"
+        href={targetLink}
+        className={styles.productItem}
+      >
+        <Text
+          justifyContent="flex-start"
+          flexGrow={1}
+          height={16}
+          fontSize={{ base: 'medium', md: 'large' }}
+          maxWidth="400px"
+          className={styles.productDescription}
+        >
+          {description}
+        </Text>
+      </Link>
+    ) : (
       <Text
         justifyContent="flex-start"
         flexGrow={1}
         height={16}
         fontSize={{ base: 'medium', md: 'large' }}
         maxWidth="400px"
-        className={styles.productDescription}
+        className={`${styles.productDescription} ${styles.inactiveLink}`}
       >
         {description}
       </Text>
-    </Link>
+    )}
   </Flex>
 )

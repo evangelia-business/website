@@ -29,6 +29,7 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
       iconSrc: '/tech.svg',
       color: 'var(--accent-hex)',
       targetLink: 'https://tech.evangelia.me',
+      isLaunched: true,
     },
     {
       title: t('evexia_title').toUpperCase(),
@@ -36,6 +37,7 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
       iconSrc: '/Evangelia-Icons_e_commerce.svg',
       color: 'var(--green-hex)',
       targetLink: '',
+      isLaunched: false,
     },
     {
       title: t('rhizes_title').toUpperCase(),
@@ -43,6 +45,7 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
       iconSrc: '/Evangelia-Icons_global_citizen.svg',
       color: 'var(--orange-hex)',
       targetLink: '',
+      isLaunched: false,
     },
     {
       title: t('ekphrasis_title').toUpperCase(),
@@ -50,6 +53,7 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
       iconSrc: '/Evangelia-Icons_art_and_expression.svg',
       color: 'var(--purple-hex)',
       targetLink: '',
+      isLaunched: false,
     },
   ]
 
@@ -63,7 +67,7 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
       paddingBottom={24}
       paddingTop={20}
       paddingX={{ base: 0, md: 14 }}
-      gap={12}
+      gap={20}
       justifyContent="center"
       alignItems="center"
       background="#2B2E3B"
@@ -81,8 +85,20 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
         paddingBottom={{ base: 0, md: 8 }}
       >
         {topRowProducts.map((product, index) => (
-          <Box key={index}>
+          <Box key={index} height={{ base: 'auto', md: '10rem' }}>
             <ProductCard {...product} />
+            {!product.isLaunched && (
+              <Text
+                alignSelf="center"
+                width="max-content"
+                backgroundColor="#6C757D"
+                padding="7px 10px"
+                marginTop="10px"
+              >
+                {' '}
+                Comming soon
+              </Text>
+            )}
           </Box>
         ))}
       </Flex>
@@ -91,10 +107,24 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
         width={{ base: '100%', lg: '57rem' }}
         gap={10}
         justifyContent="space-between"
+        alignSelf="center"
+        alignItems="center"
       >
         {bottomRowProducts.map((product, index) => (
-          <Box key={index}>
+          <Box key={index} height={{ base: 'auto', md: '10rem' }}>
             <ProductCard {...product} />
+            {!product.isLaunched && (
+              <Text
+                alignSelf="center"
+                width="max-content"
+                backgroundColor="#6C757D"
+                padding="7px 10px"
+                marginTop="10px"
+              >
+                {' '}
+                Comming soon
+              </Text>
+            )}
           </Box>
         ))}
       </Flex>

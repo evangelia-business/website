@@ -16,3 +16,8 @@
 a.productItem:hover {
   @apply no-underline;
 }
+
+.inactiveLink {
+  pointer-events: none; /* Disable click events */
+  opacity: 0.6; /* Optional: visually indicate it's inactive */
+}

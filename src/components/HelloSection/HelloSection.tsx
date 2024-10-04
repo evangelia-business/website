@@ -28,6 +28,7 @@ export default function HelloSection() {
           fontSize={{ base: 'medium', md: 'large' }}
           display="block"
           width={{ base: '100%', md: 'auto', lg: '32rem' }}
+          maxWidth="55rem"
         >
           <Text>{t('description_init')}</Text>
           <br />

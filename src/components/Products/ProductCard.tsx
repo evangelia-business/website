@@ -22,10 +22,29 @@ export const ProductCard: React.FC<Product> = ({
     className={styles.productcard}
   >
     <Flex alignItems="center" pb={4}>
-      <Text color={color} fontWeight={550} fontSize="xl" height={8} mr={3}>
+      <Text
+        color={color}
+        fontWeight={550}
+        fontSize="xl"
+        height={8}
+        mr={3}
+        className={styles.inactiveTitle}
+      >
         {title}
       </Text>
       <Image src={iconSrc} alt={`${title} icon`} boxSize={8} />
+      {!isLaunched && (
+        <Text
+          alignSelf="flex-end"
+          width="max-content"
+          backgroundColor="#6C757D"
+          padding="3px 5px"
+          position="relative"
+          right={{ base: '-70px', md: '-50px' }}
+        >
+          In Progress
+        </Text>
+      )}
     </Flex>
     {isLaunched ? (
       <Link

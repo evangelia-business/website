@@ -26,17 +26,8 @@ export default function Footer() {
       <Flex gap={5} alignItems="center" padding="0px 20px" fontSize={6}>
         <Link
           role="link"
-          data-testid="twitter"
-          href="https://x.com/Evangelia_Tech"
-          isExternal
-        >
-          <Image alt="X icon" src="/twitter.svg" boxSize={4} />
-        </Link>
-
-        <Link
-          role="link"
           data-testid="youtube"
-          href="https://www.youtube.com/@EvangeliaMitsopoulouTecg-vn8jd"
+          href="https://www.youtube.com/@Evangelia.Mitsopoulou"
           isExternal
         >
           <Image alt="YouTube icon" src="/hello-icon-youtube.svg" boxSize={6} />

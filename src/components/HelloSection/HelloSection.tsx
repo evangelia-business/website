@@ -23,7 +23,6 @@ export default function HelloSection() {
         >
           {t('title').toUpperCase()},
         </Text>
-
         <Flex
           fontSize={{ base: 'medium', md: 'large' }}
           display="block"
@@ -57,10 +56,6 @@ export default function HelloSection() {
             {t('creative_expression')}
           </Text>
           <Text as="span">{t('description_after_creative_expression')}</Text>
-        </Flex>
-        <Flex gap={2} marginTop="20px" justifyContent="flex-start">
-          <Image alt="YouTube icon" src="/hello-icon-youtube.svg" boxSize={6} />
-          <Image alt="Mic icon" src="/icon-mic.svg" boxSize={6} />
         </Flex>
       </Flex>
 

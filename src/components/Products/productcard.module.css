@@ -2,15 +2,14 @@
 .productcard p:hover {
   cursor: pointer; /* Change cursor to pointer on hover */
   color: #b0c4de; /* Change text color to your brand color on hover */
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); /* Very sharp shadow */
+  //-webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.8); /* Outline effect for text */
+  transform: scale(1.06);
+  @apply underline;
 }
 
 .productcard {
   transition: background-color 0.3s ease; /* Transition effect */
-}
-
-.productcard:hover {
-  background-color: #4c5466; /* Change to light grayish blue on hover */
-  @apply no-underline; /* Remove underline on hover */
 }
 
 a.productItem:hover {
@@ -20,4 +19,8 @@ a.productItem:hover {
 .inactiveLink {
   pointer-events: none; /* Disable click events */
   opacity: 0.6; /* Optional: visually indicate it's inactive */
+}
+
+.inactiveTitle {
+  pointer-events: none; /* Disable click events */
 }

@@ -83,22 +83,11 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
         alignSelf="center"
         alignItems="center"
         paddingBottom={{ base: 0, md: 8 }}
+        className="product-row"
       >
         {topRowProducts.map((product, index) => (
           <Box key={index} height={{ base: 'auto', md: '10rem' }}>
             <ProductCard {...product} />
-            {!product.isLaunched && (
-              <Text
-                alignSelf="center"
-                width="max-content"
-                backgroundColor="#6C757D"
-                padding="7px 10px"
-                marginTop="10px"
-              >
-                {' '}
-                Comming soon
-              </Text>
-            )}
           </Box>
         ))}
       </Flex>
@@ -109,22 +98,11 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
         justifyContent="space-between"
         alignSelf="center"
         alignItems="center"
+        className="product-row"
       >
         {bottomRowProducts.map((product, index) => (
           <Box key={index} height={{ base: 'auto', md: '10rem' }}>
             <ProductCard {...product} />
-            {!product.isLaunched && (
-              <Text
-                alignSelf="center"
-                width="max-content"
-                backgroundColor="#6C757D"
-                padding="7px 10px"
-                marginTop="10px"
-              >
-                {' '}
-                Comming soon
-              </Text>
-            )}
           </Box>
         ))}
       </Flex>

@@ -23,9 +23,8 @@ export default function Header() {
             />
           </Box>
           <Spacer />
-          <Box display={{ base: 'none', md: 'block' }}>
-            <Menu />
-          </Box>
+
+          <Menu />
         </Flex>
       </GridItem>
       <GridItem colStart={1}>

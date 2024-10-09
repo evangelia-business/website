@@ -10,7 +10,11 @@ export default function Menu() {
 
   return (
     <Box as="header" className={styles.header}>
-      <HStack as="nav" spacing="1rem">
+      <HStack
+        as="nav"
+        spacing="1rem"
+        fontSize={{ base: 'normal', md: 'larger' }}
+      >
         <Link
           as={NextLink}
           data-testid="home-link"

@@ -3,6 +3,7 @@ import { Grid } from '@chakra-ui/react'
 import Header from '@/components/Header/Header'
 import Products from '@/components/Products/Products'
 import HelloSection from '../HelloSection/HelloSection'
+import Footer from '../Footer/Footer'
 export default function HomePage() {
   return (
     <Grid
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Header />
       <HelloSection />
       <Products />
+      <Footer />
     </Grid>
   )
 }
